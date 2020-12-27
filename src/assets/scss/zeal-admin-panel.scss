@@ -1,19 +1,15 @@
-@import "~ngx-toastr/toastr";
-@import "zeal-dashboard/mixins";
-
 // import all fonts
+@import "zeal-admin-panel/variables";
 @import "zeal-admin-panel/fonts/fonts";
 
 // cards
-@import "zeal-dashboard/cards";
-@import "zeal-dashboard/cards/card-plain";
-@import "zeal-dashboard/cards/card-chart";
-@import "zeal-dashboard/cards/card-user";
-@import "zeal-dashboard/cards/card-map";
-@import "zeal-dashboard/cards/card-stats";
-
-// angular differences
-@import "zeal-dashboard/zeal_added";
+@import "zeal-admin-panel/cards";
+@import "zeal-admin-panel/cards/card-plain";
+@import "zeal-admin-panel/cards/card-chart";
+@import "zeal-admin-panel/cards/card-user";
+@import "zeal-admin-panel/cards/card-map";
+@import "zeal-admin-panel/cards/card-stats"; // angular differences
+@import "zeal-admin-panel/zeal_added";
 
 // define main colors and fonts
 .zeal-color {
