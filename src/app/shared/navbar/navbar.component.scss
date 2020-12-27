@@ -1,0 +1,32 @@
+nav {
+  a {
+    cursor: pointer;
+  }
+}
+.page-title {
+  font-weight: 600;
+  font-size: 1.125em;
+}
+.navbar-nav.right-side {
+  li {
+    margin: 0 0.6em;
+    .img-container,
+    .img-container img {
+      width: 47px;
+      height: 47px;
+      border-radius: 50%;
+    }
+    .notication-container {
+      position: relative;
+      .blue-badge {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        background-color: #2e5bff;
+        border-radius: 50%;
+      }
+    }
+  }
+}

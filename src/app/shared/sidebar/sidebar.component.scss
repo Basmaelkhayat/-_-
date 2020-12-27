@@ -1,0 +1,53 @@
+:host {
+  width: 5%;
+  max-width: 150px;
+  min-width: 90px;
+}
+.sidebar {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5em;
+  background-color: white;
+
+  ::ng-deep .nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    padding: 1em;
+    margin: 0.2em 0;
+    cursor: pointer;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: all 0.1s ease-in;
+    svg {
+      width: 23px;
+      height: 23px;
+      path {
+        fill: gray;
+      }
+    }
+  }
+  .active {
+    background-color: var(--zeal-color);
+    ::ng-deep svg {
+      ::ng-deep path {
+        fill: white;
+      }
+    }
+    width: 110%;
+    position: relative;
+    z-index: 500;
+  }
+  ::ng-deep .nav-item:hover {
+    background-color: var(--zeal-color);
+    svg {
+      path {
+        fill: white;
+      }
+    }
+    position: relative;
+    z-index: 500;
+  }
+}

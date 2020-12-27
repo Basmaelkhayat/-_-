@@ -1,0 +1,9 @@
+<div class="sidebar">
+  <a
+    class="nav-item"
+    *ngFor="let item of sidebarItems"
+    [innerHTML]="sanitizer.bypassSecurityTrustHtml(item.icon)"
+    routerLinkActive="active"
+    [routerLink]="item.path"
+  ></a>
+</div>
