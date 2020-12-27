@@ -1,0 +1,54 @@
+@import "~ngx-toastr/toastr";
+@import "zeal-dashboard/mixins";
+
+// import all fonts
+@import "zeal-admin-panel/fonts/fonts";
+
+// cards
+@import "zeal-dashboard/cards";
+@import "zeal-dashboard/cards/card-plain";
+@import "zeal-dashboard/cards/card-chart";
+@import "zeal-dashboard/cards/card-user";
+@import "zeal-dashboard/cards/card-map";
+@import "zeal-dashboard/cards/card-stats";
+
+// angular differences
+@import "zeal-dashboard/zeal_added";
+
+// define main colors and fonts
+.zeal-color {
+  color: $zeal-color;
+}
+.zeal-bg {
+  background-color: $zeal-color;
+}
+.poppins-font {
+  font-family: Poppins;
+}
+.ngb-dp-weekday {
+  font-family: Poppins !important;
+  color: #ee3c62 !important;
+  font-style: normal !important;
+  font-weight: 500;
+}
+.ngb-dp-content {
+  background-color: #f3f3f3;
+  border-radius: 15px;
+  border: 1px solid #cacaca;
+  border-top: 0;
+}
+.ngb-dp-header {
+  border: 1px solid #cacaca;
+}
+.ngb-dp-month-name {
+  color: var(--zeal-color);
+  font-weight: bolder;
+  font-family: Poppins;
+}
+.dropdown-menu {
+  transform: translate(15px, 36px) !important;
+  will-change: auto !important;
+}
+.calendar-icon {
+  color: #ee3c62;
+}
