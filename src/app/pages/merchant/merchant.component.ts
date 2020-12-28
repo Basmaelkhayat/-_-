@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { MerchantService } from 'src/app/services/merchant.service';
 
 @Component({
   selector: 'merchant-cmp',
@@ -6,6 +7,17 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['merchant.component.scss'],
 })
 export class MerchantComponent implements OnInit {
-  constructor() {}
-  ngOnInit() {}
+  merchant: any = null;
+  selectedCategory: any = null;
+  constructor(private merchantService: MerchantService) {}
+  ngOnInit() {
+    this.getMerchantInfo();
+  }
+  getMerchantInfo() {
+    this.merchantService.getMerchant('a').subscribe((res) => {
+      this.merchant = res;
+      this.selectedCategory = this.merchant.category;
+      console.log(res);
+    });
+  }
 }

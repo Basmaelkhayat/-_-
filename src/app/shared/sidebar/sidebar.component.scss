@@ -31,6 +31,7 @@
   }
   .active {
     background-color: var(--zeal-color);
+    box-shadow: 0px 7px 10px -1px #acb2c1;
     ::ng-deep svg {
       ::ng-deep path {
         fill: white;
