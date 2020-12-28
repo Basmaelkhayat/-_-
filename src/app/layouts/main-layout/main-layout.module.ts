@@ -18,7 +18,7 @@ import { HomeModule } from 'src/app/pages/home/home.module';
         NgbModule,
         ReactiveFormsModule,
         HttpClientModule,
-        // InterceptorModule,
+        InterceptorModule,
     ],
     declarations: [],
     providers: [],

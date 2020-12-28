@@ -9,4 +9,8 @@ export const MainLayoutRoutes: Routes = [
         path: 'merchants',
         loadChildren: () => import('../../pages/merchant/merchant.module').then((mod) => mod.MerchantModule),
     },
+    {
+        path: 'members',
+        loadChildren: () => import('../../pages/member/member.module').then((mod) => mod.MemberModule),
+    },
 ];
