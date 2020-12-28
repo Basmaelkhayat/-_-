@@ -1,0 +1,22 @@
+* {
+  color: var(--zeal-side-color);
+}
+#home {
+  .cards-container {
+    .col-md-4 {
+      padding: 0 11px;
+    }
+  }
+  .quick-stats {
+    width: 100%;
+    .card-title {
+      font-size: 0.9375em;
+      margin: 0;
+    }
+    .card-number {
+      font-size: 3em;
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+}
