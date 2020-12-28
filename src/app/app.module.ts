@@ -17,7 +17,12 @@ import { AuthGuard } from './guards/auth.guard';
 import { InterceptorModule } from './interceptors/interceptor.module';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 @NgModule({
-  declarations: [AppComponent,MainLayoutComponent, NavbarComponent, SidebarComponent],
+  declarations: [
+    AppComponent,
+    MainLayoutComponent,
+    NavbarComponent,
+    SidebarComponent,
+  ],
 
   imports: [
     BrowserAnimationsModule,
@@ -26,6 +31,7 @@ import { MainLayoutComponent } from './layouts/main-layout/main-layout.component
     NgbModule,
     AppRoutingModule,
     FormsModule,
+    AppRoutingModule,
     HttpClientModule,
     ToastrModule.forRoot(),
   ],
