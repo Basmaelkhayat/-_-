@@ -9,17 +9,17 @@ import { HomeRoutingModule } from './home-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        HomeRoutingModule,
-        NgxChartsModule,
-        ChartsModule,
-        FormsModule,
-        NgbModule,
-        ReactiveFormsModule,
-    ],
-    exports: [HomeComponent],
-    declarations: [HomeComponent],
-    providers: [],
+  imports: [
+    CommonModule,
+    HomeRoutingModule,
+    NgxChartsModule,
+    ChartsModule,
+    FormsModule,
+    NgbModule,
+    ReactiveFormsModule,
+  ],
+  exports: [HomeComponent],
+  declarations: [HomeComponent],
+  providers: [],
 })
 export class HomeModule {}
