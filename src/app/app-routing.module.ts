@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, Router } from '@angular/router';
 import { AuthGuard } from './guards';
-import { MainLayoutComponent } from './main-layout/main-layout.component';
+import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 // import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
@@ -11,9 +11,9 @@ const routes: Routes = [
         pathMatch: 'full',
     },
     {
-        path: '',
+        path: 'home',
         component: MainLayoutComponent,
-        canActivate: [AuthGuard],
+        // canActivate: [AuthGuard],
         children: [
             {
                 path: '',

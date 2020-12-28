@@ -15,8 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthGuard } from './guards/auth.guard';
 import { InterceptorModule } from './interceptors/interceptor.module';
+import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, SidebarComponent],
+  declarations: [AppComponent,MainLayoutComponent, NavbarComponent, SidebarComponent],
 
   imports: [
     BrowserAnimationsModule,
