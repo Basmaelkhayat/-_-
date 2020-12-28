@@ -7,13 +7,14 @@ import { MembersService } from 'src/app/services/member.service';
   styleUrls: ['member.component.scss'],
 })
 export class MemberComponent implements OnInit {
+  data : any ;
   constructor(private membersService :MembersService) {}
   ngOnInit() {
     this.salesBranchData()
   }
   salesBranchData() {
         this.membersService.members().subscribe((res: any) => {
-            console.log(res)
+            this.data = res ;
         });
     }
 }

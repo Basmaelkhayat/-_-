@@ -169,3 +169,14 @@ table.dataTable thead th,
 table.dataTable thead td {
   padding: 1.2em 2.2em !important;
 }
+
+.first-letter {
+  background-color: #009f88;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+}
