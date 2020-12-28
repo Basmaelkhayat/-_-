@@ -7,6 +7,12 @@ nav {
   font-weight: 600;
   font-size: 1.125em;
 }
+.navbar-user-side {
+  display: flex;
+  align-items: center;
+  flex-basis: auto;
+  flex-grow: 1;
+}
 .navbar-nav.right-side {
   li {
     margin: 0 0.6em;
