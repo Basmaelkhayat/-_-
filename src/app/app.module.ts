@@ -26,7 +26,7 @@ import { MainLayoutComponent } from './layouts/main-layout/main-layout.component
 
   imports: [
     BrowserAnimationsModule,
-    // InterceptorModule,
+    InterceptorModule,
     BrowserModule,
     NgbModule,
     AppRoutingModule,
