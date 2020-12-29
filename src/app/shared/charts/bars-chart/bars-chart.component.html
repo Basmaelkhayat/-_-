@@ -1,0 +1,27 @@
+<div class="d-flex w-100 my-4 chart-labels">
+  <div class="d-flex align-items-center mr-3">
+    <div class="label-circle zeal-bg"></div>
+    <span> Current customers </span>
+  </div>
+  <div class="d-flex align-items-center">
+    <div class="label-circle"></div>
+    <span> New customers </span>
+  </div>
+</div>
+
+<div>
+  <canvas
+    *ngIf="returningData"
+    baseChart
+    [chartType]="'bar'"
+    [datasets]="chartData"
+    [labels]="labels"
+    [options]="chartOptions"
+    [legend]="false"
+    [colors]="colors"
+    (chartClick)="onChartClick($event)"
+    height="75%"
+    width="100%"
+  >
+  </canvas>
+</div>

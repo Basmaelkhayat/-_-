@@ -7,6 +7,9 @@ import { Injectable } from '@angular/core';
 export class MerchantService {
   constructor(private http: HttpClient) {}
   getMerchant(id: string) {
-    return this.http.get(`https://api.mocki.io/v1/e53696fc/merchants/${id}`);
+    return this.http.get(`merchants/${id}`);
+  }
+  getMerchantPunches(id: string) {
+    return this.http.get(`merchants/${id}/punches`);
   }
 }

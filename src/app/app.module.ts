@@ -16,6 +16,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { AuthGuard } from './guards/auth.guard';
 import { InterceptorModule } from './interceptors/interceptor.module';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
+import { ChartsModule } from 'ng2-charts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +35,7 @@ import { MainLayoutComponent } from './layouts/main-layout/main-layout.component
     AppRoutingModule,
     HttpClientModule,
     ToastrModule.forRoot(),
+    ChartsModule,
   ],
 
   providers: [CookieService, AuthGuard],

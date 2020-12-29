@@ -1,0 +1,18 @@
+.label-circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 4px;
+  background-color: var(--zeal-side-color);
+}
+.zeal-bg {
+  background-color: var(--zeal-color);
+}
+.chart-labels {
+  padding-left: 30px;
+  span {
+    color: var(--zeal-side-color);
+    font-size: 0.75em;
+    font-weight: 500;
+  }
+}
