@@ -8,49 +8,34 @@ import * as Chart from 'chart.js';
     templateUrl: './line-chart.component.html',
     styleUrls: ['./line-chart.component.css'],
 })
-export class LineChartComponent implements OnInit {
-    mixedChart: any = [];
-    ngOnInit() {
-        this.mixedChart = new Chart('bar', {
-            type: 'bar',
-            options: {
-                legend: {
-                    display: false,
-                },
-                layout: {
-                    padding: {
-                        left: 0,
-                        right: 0,
-                        top: 0,
-                        bottom: 0,
-                    },
-                },
-            },
-            data: {
-                datasets: [
-                    {
-                        data: [30, 40, 50, 70, 80, 40, 44, 80, 40, 35, 20, 40],
-                        type: 'line',
-                        backgroundColor: 'rgb(238 60 98)',
-                        borderColor: 'rgb(238 60 98)',
-                        fill: false,
-                    },
-                ],
-                labels: [
-                    'January',
-                    'February',
-                    'March',
-                    'April',
-                    'May',
-                    'June',
-                    'January',
-                    'February',
-                    'March',
-                    'April',
-                    'May',
-                    'June',
-                ],
-            },
-        });
-    }
+export class LineChartComponent{
+    lineChartData: ChartDataSets[] = [
+      { data: [85, 72, 78, 75, 77, 75]},
+    ];
+
+    lineChartLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June'];
+
+    lineChartOptions = {
+      responsive: true,
+    };
+    datasetOverride = [
+
+      {
+        label: "Line chart",
+        borderWidth: 3,
+        hoverBackgroundColor: "rgba(255,99,132,0.4)",
+        hoverBorderColor: "rgba(255,99,132,1)",
+        type: 'line'
+      }
+    ];
+    lineChartColors: Color[] = [
+      {
+        borderColor: '#EE3C62',
+        backgroundColor: '#f0f8ff00',
+      },
+    ];
+
+    lineChartLegend = true;
+    lineChartPlugins = [];
+    lineChartType = 'line';
 }

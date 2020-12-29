@@ -19,7 +19,7 @@ export class PieChartComponent {
     public pieChartOptions: ChartOptions = {
         responsive: true,
     };
-    public pieChartData: SingleDataSet = [235.21, 95.21];
+    public pieChartData: SingleDataSet = [250, 250];
     public pieChartType: ChartType = 'pie';
     public pieChartLegend = true;
     public pieChartPlugins = [];

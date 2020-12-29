@@ -18,7 +18,6 @@
       text-transform: initial;
       color: black;
       font-family: Poppins;
-      font-weight: bolder;
     }
     img {
       width: 9em;
@@ -61,8 +60,71 @@
     }
   }
   &__mainContent {
+    &__monthly {
+      @media only screen and (min-width: 991px) {
+        padding-left: 0;
+      }
+      @media only screen and (max-width: 900px) {
+        padding: 0;
+      }
+
+      &__content {
+        #scrollableContent {
+          height: 24em;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+    &__activityUser {
+      @media only screen and (min-width: 991px) {
+        padding-left: 0;
+      }
+      @media only screen and (max-width: 900px) {
+        padding: 0;
+      }
+
+      &__content {
+        #scrollableContent {
+          height: 24em;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+    &__gender {
+      @media only screen and (min-width: 991px) {
+        padding-left: 0;
+      }
+      @media only screen and (max-width: 900px) {
+        padding: 0;
+      }
+
+      &__content {
+        #scrollableContent {
+          height: 24em;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+    &__merchants {
+      @media only screen and (min-width: 991px) {
+        padding-left: 0;
+      }
+      @media only screen and (max-width: 900px) {
+        padding: 0;
+      }
+
+      &__content {
+        #scrollableContent {
+          height: 24em;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
     &__activityTable {
-      font-weight: bolder;
       &__content {
         #scrollableContent {
           height: 24em;
@@ -128,6 +190,13 @@
       &__cards {
         .card {
           background-color: #f8f8f8;
+        }
+      }
+    }
+    &__punches {
+      &__content {
+        #scrollableContent {
+          height: 24em;
         }
       }
     }

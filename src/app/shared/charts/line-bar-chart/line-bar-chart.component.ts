@@ -30,7 +30,7 @@ export class LineBarChartComponent implements OnInit {
                 datasets: [
                     {
                         data: [30, 40, 50, 70, 80, 40, 44, 80, 40, 35, 20, 40],
-                        type: 'lineBar',
+                        type: 'line',
                         backgroundColor: 'rgb(238 60 98)',
                         borderColor: 'rgb(238 60 98)',
                         fill: false,
@@ -63,13 +63,13 @@ export class LineBarChartComponent implements OnInit {
         });
     }
 
-    // lineBarChartData: ChartDataSets[] = [
+    // lineChartData: ChartDataSets[] = [
     //   { data: [85, 72, 78, 75, 77, 75]},
     // ];
 
-    // lineBarChartLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June'];
+    // lineChartLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June'];
 
-    // lineBarChartOptions = {
+    // lineChartOptions = {
     //   responsive: true,
     // };
     // datasetOverride = [
@@ -83,17 +83,17 @@ export class LineBarChartComponent implements OnInit {
     //     borderWidth: 3,
     //     hoverBackgroundColor: "rgba(255,99,132,0.4)",
     //     hoverBorderColor: "rgba(255,99,132,1)",
-    //     type: 'lineBar'
+    //     type: 'line'
     //   }
     // ];
-    // lineBarChartColors: Color[] = [
+    // lineChartColors: Color[] = [
     //   {
     //     borderColor: '#EE3C62',
     //     backgroundColor: '#f0f8ff00',
     //   },
     // ];
 
-    // lineBarChartLegend = true;
-    // lineBarChartPlugins = [];
-    // lineBarChartType = 'lineBar';
+    // lineChartLegend = true;
+    // lineChartPlugins = [];
+    // lineChartType = 'line';
 }

@@ -1,8 +1,8 @@
-<table datatable class="table table-striped" *ngIf="dataTable.length != 0">
+<table datatable class="table table-striped">
     <thead>
         <tr class="text-align-center">
             <th class="none_sorting">
-                <button type="button" class="btn" (click)="selectAll()">Select all</button>
+                <button type="button" class="btn">Select all</button>
             </th>
             <th class="none_sorting_asc">Name</th>
             <th>Total visits</th>
@@ -14,17 +14,17 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let item of dataTable" class="text-align-center">
+        <tr class="text-align-center">
             <td class="text-align-center">
                 <!-- [(ngModel)]="item.selected" -->
                 <input type="checkbox" />
             </td>
-            <td class="name" (click)="CustomerPage()">{{ item.name }}</td>
-            <td>{{ item.visit_count }}</td>
-            <td>{{ item.total_spent }}</td>
-            <td>{{ item.redeem_count }}</td>
-            <td>{{ item.created_at | date }}</td>
-            <td>{{ item.last_visit | date }}</td>
+            <td class="name">name</td>
+            <td>count</td>
+            <td>total spent</td>
+            <td>redeem count</td>
+            <td>15/10</td>
+            <td>15/10</td>
             <!-- <td>
             <button type="button" class="btn"> 
                 Push

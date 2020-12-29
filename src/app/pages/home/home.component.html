@@ -9,7 +9,7 @@
         </div>
         <div class="pl-3">
           <h2 class="card-header">
-            {{ data.total_spent }}
+            {{data.total_spent}}
           </h2>
         </div>
       </div>
@@ -140,7 +140,7 @@
       </div>
     </div>
   </div>
-  <div class="col-lg-6 col-md-12 member__mainContent__activityTable">
+  <div class="col-lg-6 col-md-12 p-0 m-0 member__mainContent__activityTable">
     <div class="card card-stats">
       <div class="card-body">
         <div class="stats">
@@ -201,21 +201,21 @@
       </div>
     </div>
   </div>
-  <div class="col-lg-6 col-md-12 member__mainContent__activityTable">
+  <div class="col-lg-6 col-md-12 member__mainContent__monthly">
     <div class="card card-stats">
       <div class="card-body">
         <div class="stats">
           <p class="card-title">Monthly Recurring Revenue</p>
         </div>
       </div>
-      <div class="member__mainContent__activityTable__content">
+      <div class="member__mainContent__monthly__content">
         <div id="scrollableContent">
           <app-line-chart></app-line-chart>
         </div>
       </div>
     </div>
   </div>
-  <div class="col-lg-6 col-md-12 member__mainContent__activityTable">
+  <div class="col-lg-6 col-md-12 p-0 m-0 member__mainContent__activityTable">
     <div class="card card-stats">
       <div class="card-body">
         <div class="stats">
@@ -227,61 +227,61 @@
       </div>
     </div>
   </div>
-  <div class="col-lg-12 col-md-12 member__mainContent__activityTable">
+  <div class="col-lg-12 col-md-12 p-0 m-0 member__mainContent__activityUser">
     <div class="card card-stats">
       <div class="card-body">
         <div class="stats">
           <p class="card-title">Active users</p>
         </div>
       </div>
-      <div class="member__mainContent__activityTable__content">
+      <div class="member__mainContent__activityUser__content">
         <div id="scrollableContent"></div>
       </div>
     </div>
   </div>
-  <div class="col-lg-4 col-md-12 member__mainContent__activityTable">
+  <div class="col-lg-4 col-md-12 member__mainContent__merchants">
     <div class="card card-stats">
       <div class="card-body">
         <div class="stats">
-          <p class="card-title">Active users</p>
+          <p class="card-title">Top Active Merchants</p>
         </div>
       </div>
-      <div class="member__mainContent__activityTable__content">
+      <div class="member__mainContent__merchants__content">
         <div id="scrollableContent">
           <app-doughnut-chart></app-doughnut-chart>
         </div>
       </div>
     </div>
   </div>
-  <div class="col-lg-8 col-md-12 member__mainContent__activityTable">
+  <div class="col-lg-8 col-md-12 p-0 m-0 member__mainContent__downloads">
     <div class="card card-stats">
       <div class="card-body">
         <div class="stats">
           <p class="card-title">Downloads</p>
         </div>
       </div>
-      <div class="member__mainContent__activityTable__content">
+      <div class="member__mainContent__downloads__content">
         <div id="scrollableContent">
           <app-line-bar-chart></app-line-bar-chart>
         </div>
       </div>
     </div>
   </div>
-  <div class="col-lg-3 col-md-12 member__mainContent__activityTable">
+  <div class="col-lg-3 col-md-12 member__mainContent__gender">
     <div class="card card-stats">
       <div class="card-body">
         <div class="stats">
           <p class="card-title">gender distribution </p>
         </div>
       </div>
-      <div class="member__mainContent__activityTable__content">
+      <div class="member__mainContent__gender__content">
         <div id="scrollableContent">
             <pie-chart></pie-chart>
         </div>
       </div>
     </div>
   </div>
-  <div class="col-lg-9 col-md-12 member__mainContent__punches">
+  <div class="col-lg-9 col-md-12 p-0 m-0 member__mainContent__punches">
     <div class="card card-stats">
       <div class="card-body">
         <div class="stats">
@@ -289,7 +289,13 @@
         </div>
       </div>
       <div class="member__mainContent__punches__content">
-        <app-bars-chart></app-bars-chart>
+        <div id="scrollableContent">
+          <app-bars-chart
+            *ngIf="punches"
+              [punches]="punches"
+            >   
+          </app-bars-chart>
+        </div>
       </div>
     </div>
   </div>
