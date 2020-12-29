@@ -209,7 +209,9 @@
         </div>
       </div>
       <div class="member__mainContent__activityTable__content">
-        <div id="scrollableContent"></div>
+        <div id="scrollableContent">
+          <app-line-chart></app-line-chart>
+        </div>
       </div>
     </div>
   </div>
@@ -265,11 +267,13 @@
     <div class="card card-stats">
       <div class="card-body">
         <div class="stats">
-          <p class="card-title">Active users</p>
+          <p class="card-title">gender distribution </p>
         </div>
       </div>
       <div class="member__mainContent__activityTable__content">
-        <div id="scrollableContent"></div>
+        <div id="scrollableContent">
+            <app-doughnut-chart></app-doughnut-chart>
+        </div>
       </div>
     </div>
   </div>
@@ -280,7 +284,9 @@
           <p class="card-title">Punches</p>
         </div>
       </div>
-      <div class="member__mainContent__punches__content"></div>
+      <div class="member__mainContent__punches__content">
+        <app-bars-chart></app-bars-chart>
+      </div>
     </div>
   </div>
 </div>

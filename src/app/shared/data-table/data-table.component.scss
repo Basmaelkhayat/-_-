@@ -1,0 +1,37 @@
+table {
+    color: #4d4f5c;
+    thead {
+        th,
+        td {
+            padding: 1.5em;
+            border-bottom: none;
+            background-color: #009f881f;
+            color: #009f88;
+            text-transform: inherit;
+            font-weight: 600;
+        }
+        .none_sorting_asc {
+            background-image: none;
+            pointer-events: none;
+        }
+        .none_sorting {
+            background-image: none;
+        }
+    }
+    tbody {
+        td {
+            padding: 1.5em;
+            border: 0;
+        }
+        .name {
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+    button {
+        color: white;
+        background-color: #009f88;
+        padding: 0.5em 1.4em;
+        text-transform: inherit;
+    }
+}

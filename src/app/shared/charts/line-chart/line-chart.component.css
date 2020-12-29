@@ -1,0 +1,6 @@
+@media (min-width: 992px) {
+    canvas.chartjs-render-monitor {
+        height: fit-content !important;
+        width: -webkit-fill-available !important;
+    }
+}

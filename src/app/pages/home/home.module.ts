@@ -7,6 +7,10 @@ import { ChartsModule } from 'ng2-charts';
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BarsChartModule } from '../../shared/charts/bars-chart/bars-chart.module';
+import { CustomersModule } from '../../shared/customers/customers.module';
+import { DoughnutChartsModule } from '../../shared/charts/doughnut-chart/doughnut-chart.module';
+import { LineChartsModule } from '../../shared/charts/line-chart/line-chart.module';
 
 @NgModule({
   imports: [
@@ -17,6 +21,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     NgbModule,
     ReactiveFormsModule,
+    CustomersModule,
+    BarsChartModule,
+    DoughnutChartsModule,
+    LineChartsModule
   ],
   exports: [HomeComponent],
   declarations: [HomeComponent],

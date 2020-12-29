@@ -1,0 +1,151 @@
+.customers {
+    .dropdown-menu.show {
+        box-shadow: 0 15px 45px -5px rgba(7, 10, 25, 0.25) !important;
+    }
+    &__container {
+        .btn:hover,
+        .btn:focus,
+        .btn:active {
+            background-color: #179f88 !important;
+            color: #ffffff !important;
+            box-shadow: 0 0 0 7px #009f8824 !important;
+            border: 2.4px solid #009f8824 !important;
+        }
+        .filter {
+            text-transform: uppercase;
+            color: #8798ad;
+        }
+        text-transform: initial;
+        &__input {
+            padding: 0.8em 1em;
+            background-color: #f5f6fa;
+            border: #f5f6fa 1px solid;
+            color: #b0bac9;
+            border-radius: 19px;
+        }
+        &__input::placeholder {
+            color: #b0bac9;
+        }
+        .form-control-feedback {
+            position: absolute;
+            z-index: 2;
+            display: block;
+            width: 89%;
+            line-height: 2.375rem;
+            text-align: end;
+            pointer-events: none;
+            color: #000000;
+            img {
+                width: 1.2em;
+            }
+        }
+        &__buttons {
+            display: flex;
+            button {
+                text-transform: inherit;
+                border-radius: 34px;
+                background-color: #f4f4f7;
+                color: #585858;
+                font-weight: 600;
+                font-family: Poppins;
+                padding: 0.5em 2em;
+                box-shadow: 0 0 0 0px #f4f4f7 !important;
+                border: 2.4px solid #f4f4f7;
+                margin-top: 0.5em;
+                span {
+                    font-size: medium;
+                }
+            }
+            img {
+                height: 1em;
+                margin: 1em 1.5em 1em 0em;
+            }
+            .d-grid {
+                display: grid;
+                a {
+                    color: #a5a5a5;
+                    font-weight: bolder;
+                    cursor: pointer;
+                    img {
+                        height: 1em;
+                        margin: 1em 0.5em 1em 0em;
+                    }
+                }
+                button:hover,
+                button:focus {
+                    background-color: #f4f4f7 !important;
+                    box-shadow: 0 0 0 7px #70707040 !important;
+                    border: 2.4px solid white;
+                    color: black !important;
+                    padding: 0.5em 2em;
+                }
+                .dropdown-menu {
+                    span {
+                        position: absolute;
+                        z-index: 2;
+                        display: block;
+                        margin: 0.9em 1.5em 2.5em 2em;
+                        text-align: start;
+                        pointer-events: none;
+                    }
+                    input {
+                        color: #585858;
+                        box-shadow: 0 0 0 3px #009f8824;
+                        border: 2px solid #009f76;
+                        border-radius: 35px;
+                        padding: 0.5em 1em 0.5em 2.5em;
+                        margin: 1.5em;
+                        width: auto;
+                    }
+                    input::placeholder {
+                        color: #d5d5d5;
+                    }
+                    p {
+                        color: #585858;
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        margin: 1em 1.6em;
+                    }
+                    a {
+                        margin: 1em;
+                        width: auto;
+                        color: black;
+                        cursor: pointer;
+                    }
+                    a.dropdown-item:hover {
+                        border-radius: 35px;
+                        background-color: #f6f6f6;
+                        width: auto;
+                        color: black !important;
+                    }
+                }
+            }
+            .push {
+                background-color: #ee3c62 !important;
+                color: white !important;
+                border-radius: 4px !important;
+                font-weight: 600;
+                font-size: inherit;
+                padding: 0.7em 4em !important;
+                font-family: Poppins;
+            }
+        }
+        .actions {
+            button {
+                background-color: white;
+                border: 2.4px solid #c1c1c1;
+                box-shadow: 0 0 0 7px #ffffff;
+                border-radius: 60px;
+                font-weight: 500;
+                margin: 0em 0.7em;
+                text-transform: initial;
+                :hover {
+                    background-color: #009f88;
+                    color: white;
+                    box-shadow: 0 0 0 3px #009f8824;
+                    border: 2.4px solid white;
+                }
+            }
+        }
+    }
+}
