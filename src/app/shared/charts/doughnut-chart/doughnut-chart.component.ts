@@ -14,14 +14,16 @@ export class DoughnutChartComponent implements OnInit {
             data: {
                 datasets: [
                     {
-                        data: [50,50],
+                        data: [25, 25, 25, 25],
                         backgroundColor: [
                             'rgb(60 196 128)',
                             'rgb(255 96 96)',
+                            'rgb(6 44 69)',
+                            'rgb(158 167 178)',
                         ],
                     },
                 ],
-                labels: ['Males', 'Females'],
+                labels: ['January', 'February', 'March', 'June'],
             },
 
             options: {

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-customers',
-    moduleId: module.id,
     templateUrl: './customers.component.html',
     styleUrls: ['./customers.component.scss'],
 })

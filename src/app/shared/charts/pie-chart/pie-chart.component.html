@@ -1,0 +1,29 @@
+<div class="chart">
+    <div class="chart-wrapper">
+        <canvas
+            baseChart
+            [data]="pieChartData"
+            [labels]="pieChartLabels"
+            [chartType]="pieChartType"
+            [colors]="pieChartColor"
+            [options]="pieChartOptions"
+            [plugins]="pieChartPlugins"
+            [legend]="false"
+        >
+        </canvas>
+    </div>
+    <div class="col-lg-12 col-12 row chartLaabel">
+        <div class="col-lg-8 col-8 m-0">
+            <img src="../../../../assets/img/Ellipse 52.png" alt="" />
+            <span> Maadi branch </span>
+        </div>
+        <p class="col-lg-4 col-4 p-0 m-0">{{ pieChartData[0] }} <sub> EGP</sub></p>
+    </div>
+    <div class="col-lg-12 col-12 row chartLaabel pt-3">
+        <div class="col-lg-8 col-8 m-0">
+            <img src="../../../../assets/img/Ellipse 52.png" alt="" />
+            <span> Mohandseen branch </span>
+        </div>
+        <p class="col-lg-4 col-4 p-0 m-0">{{ pieChartData[1] }} <sub> EGP</sub></p>
+    </div>
+</div>

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CustomersComponent } from './customers.component';
-import { CustomersRoutingModule } from './customers-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DataTablesModule } from 'angular-datatables';
@@ -15,7 +14,6 @@ import { DataTableModule } from '../data-table/data-table.module';
     declarations: [CustomersComponent],
     imports: [
         CommonModule,
-        CustomersRoutingModule,
         FormsModule,
         NgbModule,
         ReactiveFormsModule,
