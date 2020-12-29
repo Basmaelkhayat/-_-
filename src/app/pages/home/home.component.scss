@@ -1,0 +1,135 @@
+.member {
+  @media only screen and (max-width: 991px) {
+    .none_padding_right:nth-child(odd) {
+      padding-left: 0;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .none_padding_right {
+      padding-left: 0;
+    }
+  }
+  &__topCustomers {
+    .first-letter {
+      width: 9em;
+      height: 9em;
+    }
+    h4 {
+      text-transform: initial;
+      color: black;
+      font-family: Poppins;
+      font-weight: bolder;
+    }
+    img {
+      width: 9em;
+      height: 9em;
+      background-color: #009f88;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+    }
+    .title {
+      color: #2e384d;
+      font-weight: 600;
+      text-transform: initial;
+    }
+    .name {
+      color: #009f88;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .days {
+      color: #009f88;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+    &__buttons {
+      margin-top: -1em;
+      button {
+        background-color: #ee3c62;
+        color: white;
+        font-weight: 600;
+        font-size: inherit;
+        font-family: Poppins;
+        border-radius: 66px;
+        padding: 0.5em 1.2em;
+        margin-bottom: 0em;
+        border-color: #ee3c62;
+      }
+    }
+  }
+  &__mainContent {
+    &__activityTable {
+      font-weight: bolder;
+      &__content {
+        #scrollableContent {
+          height: 24em;
+          padding: 0;
+          margin: 0;
+          .feed {
+            &__table {
+              color: #062c45;
+              tr:nth-child(odd) {
+                background-color: #fcfcfe;
+              }
+              .title-td {
+                text-align: start;
+                width: 45%;
+                padding-top: 1em;
+              }
+              thead {
+                tr {
+                  background-color: #ffffff;
+                }
+              }
+              td {
+                border-top: none;
+
+                text-align: center;
+                padding: 1em 0px;
+                margin: auto;
+                padding-top: 2em;
+              }
+              .img-td {
+                $img-height: 3em;
+                padding-top: 1em;
+
+                img {
+                  width: $img-height;
+                  height: $img-height;
+                  border-radius: 50%;
+                }
+                .first-letter {
+                  width: 3em;
+                  height: 3em;
+                }
+              }
+              .value-td {
+                color: #7b7b7b;
+                padding-top: 2em;
+              }
+              &__avatar {
+                width: 3em;
+              }
+            }
+            &__date-img {
+              padding: 0;
+              img {
+                width: 1.3em;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__MonthlyBranch {
+      &__cards {
+        .card {
+          background-color: #f8f8f8;
+        }
+      }
+    }
+  }
+}
