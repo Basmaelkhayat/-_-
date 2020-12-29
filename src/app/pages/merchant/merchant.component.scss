@@ -1,0 +1,211 @@
+#merchant {
+  .row-height {
+    height: 33em;
+  }
+
+  .cards-bottom-margin {
+    margin-bottom: 15px;
+  }
+  .scrollable-content {
+    height: 100%;
+    overflow-y: scroll;
+    padding: 10px 0;
+  }
+
+  .zeal-white-btn {
+    background-color: white;
+    color: var(--zeal-color);
+    font-size: 0.75em;
+    font-weight: 600;
+    border-radius: 30px;
+    border: 2px solid var(--zeal-color);
+    padding: 8px 24px;
+    outline: none;
+  }
+  .zeal-white-btn:hover {
+    box-shadow: 0 0 6px #0fcead;
+  }
+  .main-cards-title {
+    font-size: 1.125em;
+    color: var(--zeal-side-color);
+    font-weight: 500;
+    margin: 0;
+  }
+  .card-body {
+    padding: 0.5em;
+  }
+  .merchant-info {
+    width: 100%;
+    text-align: center;
+    $bottom-margin: 30px;
+    margin: 0;
+    .card-title {
+      font-size: 0.9375em;
+      margin: 0;
+    }
+    .card-number {
+      font-size: 3em;
+      font-weight: 600;
+      margin: 0;
+    }
+    .merchant-img,
+    .img-container {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      margin-bottom: $bottom-margin;
+    }
+    .merchant-img {
+      border: 1px solid #707070;
+    }
+    .merchant-name {
+      font-weight: 900;
+      font-size: 1.5em;
+      margin-bottom: $bottom-margin;
+      color: var(--zeal-side-color);
+    }
+    p {
+      color: #000;
+      font-weight: 600;
+      font-size: 0.875em;
+    }
+    .merchant-description {
+      margin-bottom: $bottom-margin;
+      color: #707070;
+      font-size: 0.875em;
+      font-weight: 300;
+    }
+    .merchant-branches {
+      margin-bottom: $bottom-margin;
+    }
+    .merchant-date {
+      margin-bottom: $bottom-margin/2;
+    }
+    .merchant-renewal {
+      margin-bottom: $bottom-margin/2;
+    }
+    .category-container,
+    .cuisines-container {
+      text-align: start;
+    }
+    .category-label {
+      color: var(--zeal-color);
+      font-size: 0.875em;
+      font-weight: 600;
+    }
+    .category-dropdown {
+      $select-x-padding: 0.6em;
+      width: 100%;
+      position: relative;
+
+      span {
+        position: absolute;
+        right: $select-x-padding;
+        top: calc(50% - 11px);
+      }
+      .category-select {
+        width: 100%;
+        border: 1px solid #c4c4c4;
+        padding: 0.5em $select-x-padding;
+        outline: 0;
+        border-radius: 4px;
+        font-weight: 600;
+        font-size: 0.875em;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+      }
+      option {
+        font-weight: 600;
+      }
+    }
+    .cuisines-list {
+      .cuisine-name {
+        background-color: var(--zeal-color);
+        color: white;
+        margin: 0.2em;
+        border-radius: 10px;
+        padding: 0.5em;
+        font-size: 0.75em;
+        font-weight: 500;
+        display: inline-block;
+      }
+    }
+  }
+  .quick-stats {
+    color: var(--zeal-side-color);
+
+    .card-title {
+      font-size: 0.9375em;
+      margin: 0;
+    }
+    .card-number {
+      font-size: 3vw;
+      font-weight: 600;
+      margin: 0;
+    }
+    @media (max-width: 992px) {
+      .card-number {
+        font-size: 3em;
+      }
+    }
+  }
+  .team-members {
+    .table {
+      td {
+        border: 0;
+        vertical-align: middle;
+      }
+      .img-td,
+      img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+      }
+      .member-name {
+        font-size: 0.875em;
+        font-weight: 600;
+        color: var(--zeal-side-color);
+      }
+      .member-title {
+        font-size: 0.75em;
+        font-weight: 400;
+        color: #6e6d6d;
+      }
+      .member-email {
+        font-size: 0.75em;
+        color: var(--zeal-side-color);
+        font-weight: 600;
+      }
+    }
+  }
+  .date-pickers {
+    display: flex;
+    ::ng-deep .dropdown-menu {
+      transform: translate(-115px, 36px) !important;
+      will-change: auto !important;
+    }
+    .date-time-btn {
+      padding: 0;
+      border: 0;
+      outline: 0;
+      background-color: transparent;
+      padding-right: 10px;
+    }
+    .date-picker-input {
+      max-width: 120px;
+
+      background-color: white;
+      border: 1px solid #c4c4c4;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      input {
+        background-color: transparent;
+        border: 0;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+}

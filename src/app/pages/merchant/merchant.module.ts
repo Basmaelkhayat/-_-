@@ -7,6 +7,7 @@ import { ChartsModule } from 'ng2-charts';
 import { MerchantComponent } from './merchant.component';
 import { MerchantRoutingModule } from './merchant-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BarsChartComponent } from 'src/app/shared/charts/bars-chart/bars-chart.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
   ],
   exports: [MerchantComponent],
-  declarations: [MerchantComponent],
+  declarations: [MerchantComponent, BarsChartComponent],
   providers: [],
 })
 export class MerchantModule {}

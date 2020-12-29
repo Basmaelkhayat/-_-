@@ -13,8 +13,7 @@ export class NavbarComponent implements OnInit {
   route: string;
   constructor(private router: Router, private location: Location) {}
 
-  getTitle() {
-    
+  getPathInfo() {
     if (this.location.path() != '') {
       this.route = this.location.path();
       if (this.route.charAt(0) === '#') {
@@ -23,12 +22,13 @@ export class NavbarComponent implements OnInit {
       if (this.route.charAt(0) === '/') {
         this.route = this.route.slice(1);
       }
-      if(this.location.path()=='/members/member-page'){
-        return 'Member Page';
+
+      if (this.location.path() == '/members/member-page') {
+        return { path: '', title: 'Member Page' };
       }
-      return ROUTES.find((r) => r.path == this.route).title;
+      return ROUTES.find((r) => r.path == this.route);
     }
-    return 'Home Page';
+    return ROUTES[0];
   }
   ngOnInit(): void {}
 }
