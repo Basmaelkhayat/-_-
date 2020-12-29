@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit {
   constructor(private router: Router, private location: Location) {}
 
   getTitle() {
+    
     if (this.location.path() != '') {
       this.route = this.location.path();
       if (this.route.charAt(0) === '#') {
@@ -21,6 +22,9 @@ export class NavbarComponent implements OnInit {
       }
       if (this.route.charAt(0) === '/') {
         this.route = this.route.slice(1);
+      }
+      if(this.location.path()=='/members/member-page'){
+        return 'Member Page';
       }
       return ROUTES.find((r) => r.path == this.route).title;
     }
