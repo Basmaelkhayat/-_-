@@ -62,7 +62,13 @@ h3.card-header {
   font-family: "Poppins";
   font-weight: bold;
 }
-
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active {
+  color: rgba(0, 0, 0, 0.9);
+  padding-left: 2em;
+}
 .table-striped tbody tr:nth-of-type(even) {
   background-color: #fcfcfe;
 }

@@ -22,6 +22,10 @@ export class NavbarComponent implements OnInit {
       if (this.route.charAt(0) === '/') {
         this.route = this.route.slice(1);
       }
+
+      if (this.location.path() == '/members/member-page') {
+        return { path: '', title: 'Member Page' };
+      }
       return ROUTES.find((r) => r.path == this.route);
     }
     return ROUTES[0];

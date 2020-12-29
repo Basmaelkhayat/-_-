@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { MembersService } from 'src/app/services/member.service';
 
 @Component({
   selector: 'home-cmp',
@@ -6,6 +7,14 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
-  ngOnInit() {}
-}
+  data : any ;
+  constructor(private membersService :MembersService) {}
+  ngOnInit() {
+    this.salesBranchData()
+  }
+  salesBranchData() {
+        this.membersService.members().subscribe((res: any) => {
+            this.data = res ;
+        });
+    }
+  }
