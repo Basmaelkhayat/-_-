@@ -17,6 +17,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { InterceptorModule } from './interceptors/interceptor.module';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { ChartsModule } from 'ng2-charts';
+import { DataTablesModule } from 'angular-datatables';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +37,7 @@ import { ChartsModule } from 'ng2-charts';
     HttpClientModule,
     ToastrModule.forRoot(),
     ChartsModule,
+    DataTablesModule
   ],
 
   providers: [CookieService, AuthGuard],
