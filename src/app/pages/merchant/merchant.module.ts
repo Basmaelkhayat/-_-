@@ -8,6 +8,7 @@ import { MerchantComponent } from './merchant.component';
 import { MerchantRoutingModule } from './merchant-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BarsChartComponent } from 'src/app/shared/charts/bars-chart/bars-chart.component';
+import { SingleBarModule } from 'src/app/shared/charts/single-bar/single-bar.module';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { BarsChartComponent } from 'src/app/shared/charts/bars-chart/bars-chart.
     FormsModule,
     NgbModule,
     ReactiveFormsModule,
+    SingleBarModule,
   ],
   exports: [MerchantComponent],
   declarations: [MerchantComponent, BarsChartComponent],

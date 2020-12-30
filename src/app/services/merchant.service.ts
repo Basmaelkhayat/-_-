@@ -12,4 +12,10 @@ export class MerchantService {
   getMerchantPunches(id: string) {
     return this.http.get(`merchants/${id}/punches`);
   }
+  getTopRedeemedRewards(id: string) {
+    return this.http.get(`merchants/${id}/top-redeemed`);
+  }
+  getSales(id: string) {
+    return this.http.get(`merchants/${id}/sales`);
+  }
 }

@@ -11,7 +11,7 @@
 
 <div>
   <canvas
-    *ngIf="returningData"
+    *ngIf="this.chartData"
     baseChart
     [chartType]="'bar'"
     [datasets]="chartData"

@@ -1,0 +1,16 @@
+<div>
+  <canvas
+    *ngIf="this.chartData"
+    baseChart
+    [chartType]="'bar'"
+    [datasets]="chartData"
+    [labels]="labels"
+    [options]="chartOptions"
+    [legend]="false"
+    [colors]="colors"
+    (chartClick)="onChartClick($event)"
+    height="75%"
+    width="100%"
+  >
+  </canvas>
+</div>

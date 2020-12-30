@@ -1,28 +1,28 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-bars-chart',
-  templateUrl: './bars-chart.component.html',
-  styleUrls: ['./bars-chart.component.scss'],
+  selector: 'app-single-bar',
+  templateUrl: './single-bar.component.html',
+  styleUrls: ['./single-bar.component.scss'],
 })
-export class BarsChartComponent implements OnInit {
+export class SingleBarComponent implements OnInit {
   start: any;
   end: any;
   chartData: any;
   labels: any;
-  @Input() punches: any = [];
-  constructor() {}
+  @Input() data: any = [];
+  constructor() {
+    console.log('h');
+  }
 
   ngOnInit(): void {
+    console.log(this.data);
     this.chartData = [
       {
-        data: this.punches.current.map((v) => v.amount),
-      },
-      {
-        data: this.punches.new.map((v) => v.amount),
+        data: this.data.current.map((v) => v.amount),
       },
     ];
-    this.labels = this.punches.current.map((v) => v.name);
+    this.labels = this.data.current.map((v) => v.name);
   }
   ngOnChanges() {}
   // ADD CHART OPTIONS.
@@ -57,10 +57,6 @@ export class BarsChartComponent implements OnInit {
     {
       // 1st Year.
       backgroundColor: 'rgb(0, 159, 136)',
-    },
-    {
-      // 2nd Year.
-      backgroundColor: 'rgb(6, 44, 69)',
     },
   ];
 
