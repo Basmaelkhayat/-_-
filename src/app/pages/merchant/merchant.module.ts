@@ -9,6 +9,7 @@ import { MerchantRoutingModule } from './merchant-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BarsChartModule } from '../../shared/charts/bars-chart/bars-chart.module';
 import { SingleBarModule } from 'src/app/shared/charts/single-bar/single-bar.module';
+import { CustomersModule } from 'src/app/shared/customers/customers.module';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { SingleBarModule } from 'src/app/shared/charts/single-bar/single-bar.mod
     ReactiveFormsModule,
     SingleBarModule,
     BarsChartModule,
+    CustomersModule,
   ],
   exports: [MerchantComponent],
   declarations: [MerchantComponent],

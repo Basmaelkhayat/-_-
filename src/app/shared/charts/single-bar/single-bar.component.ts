@@ -11,18 +11,15 @@ export class SingleBarComponent implements OnInit {
   chartData: any;
   labels: any;
   @Input() data: any = [];
-  constructor() {
-    console.log('h');
-  }
+  constructor() {}
 
   ngOnInit(): void {
-    console.log(this.data);
     this.chartData = [
       {
-        data: this.data.current.map((v) => v.amount),
+        data: this.data?.current.map((v) => v.amount),
       },
     ];
-    this.labels = this.data.current.map((v) => v.name);
+    this.labels = this?.data.current.map((v) => v.name);
   }
   ngOnChanges() {}
   // ADD CHART OPTIONS.

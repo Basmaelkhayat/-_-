@@ -16,13 +16,13 @@ export class BarsChartComponent implements OnInit {
   ngOnInit(): void {
     this.chartData = [
       {
-        data: this.punches.current.map((v) => v.amount),
+        data: this.punches?.current.map((v) => v.amount),
       },
       {
-        data: this.punches.new.map((v) => v.amount),
+        data: this.punches?.new.map((v) => v.amount),
       },
     ];
-    this.labels = this.punches.current.map((v) => v.name);
+    this.labels = this.punches?.current.map((v) => v.name);
   }
   ngOnChanges() {}
   // ADD CHART OPTIONS.

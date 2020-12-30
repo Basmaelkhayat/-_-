@@ -1,4 +1,4 @@
-<section id="merchant">
+<section id="merchant" class="w-100">
   <div class="row first-row">
     <div class="col-lg-3 mb-3 px-2">
       <div class="card merchant-info h-100">
@@ -235,10 +235,7 @@
               </div>
               <div class="punches-chart">
                 <div class="scrollable-content">
-                  <app-bars-chart
-                    *ngIf="punches"
-                    [punches]="punches"
-                  ></app-bars-chart>
+                  <app-bars-chart [punches]="punches"></app-bars-chart>
                 </div>
               </div>
             </div>
@@ -247,7 +244,7 @@
       </div>
     </div>
   </div>
-  <div class="row second-row row-height">
+  <div class="row second-row row-height cards-bottom-margin">
     <div class="col-lg-3 mb-3 px-2 h-100">
       <div class="card redeemed-rewards h-100">
         <div class="card-body">
@@ -436,6 +433,13 @@
             </table>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 px-2">
+      <div class="customers-card w-100">
+        <app-customers></app-customers>
       </div>
     </div>
   </div>

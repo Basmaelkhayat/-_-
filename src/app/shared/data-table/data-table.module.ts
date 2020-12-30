@@ -5,8 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { DataTablesModule } from 'angular-datatables';
 
 @NgModule({
-    declarations: [DataTableComponent],
-    imports: [CommonModule, FormsModule, CommonModule, DataTablesModule],
-    exports: [DataTableComponent],
+  declarations: [DataTableComponent],
+  imports: [CommonModule, FormsModule, CommonModule, DataTablesModule],
+  exports: [DataTableComponent],
 })
 export class DataTableModule {}

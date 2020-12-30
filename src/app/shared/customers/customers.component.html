@@ -1,75 +1,75 @@
-<div class="customers px-4">
-    <div class="card">
-        <div class="card card-stats">
-            <div class="card-body row p-4 customers__container">
-                <div class="stats p-3 col-12 col-lg-12">customer list</div>
-                <div class="col-12 col-lg-4 p-2">
-                    <span class="form-control-feedback">
-                        <img src="./assets/img/Icon feather-search.png" alt="" />
-                    </span>
-                    <input
-                        type="search"
-                        placeholder="Enter customer name or phone number"
-                        class="form-group form-control customers__container__input"
-                    />
-                </div>
-                <div class="stats pt-3 col-12 filter pb-4">Filters</div>
-                <div class="col-12 customers__container__buttons ">
-                    <img src="./assets/img/Component 6 – 1.png" alt="">
+<div class="customers">
+  <div class="card card-stats">
+    <div class="card-body row customers__container">
+      <div class="stats p-3 col-12 col-lg-12">customer list</div>
+      <div class="col-12 col-lg-4 p-2">
+        <span class="form-control-feedback">
+          <img src="./assets/img/Icon feather-search.png" alt="" />
+        </span>
+        <input
+          type="search"
+          placeholder="Enter customer name or phone number"
+          class="form-group form-control customers__container__input"
+        />
+      </div>
+      <div class="stats pt-3 col-12 filter pb-4">Filters</div>
+      <div class="col-12 customers__container__buttons">
+        <img src="./assets/img/Component 6 – 1.png" alt="" />
 
-                    
-                   <div class="d-grid">
-                       <div *ngIf="showFilter">
-                        <button type="button" class="btn col-12"
-                        id="dropdownMenuB"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false">
-                            {{selectText}} 
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuB">
-                            <span>
-                                <img src="./assets/img/Icon feather-search.png" alt="" />
-                            </span>
-                            <input class="form-control" type="text" name="search" [(ngModel)]="searchText" 
-                            autocomplete="off" 
-                            placeholder="Search Trips">
-                            <p>
-                                All properties
-                            </p>
-                            <hr>
-                            <a class="dropdown-item" (click)="searchTextVal(item.name)"
-                            *ngFor="let item of orders | filter:searchText">{{item.name}}</a>
-                        </div>
-                       </div>
-                        
-                        <a  *ngIf="!showFilter" (click)="changeStatus()">
-                            <img src="./assets/img/Icon ionic-ios-add-circle-outline.png" alt="">
-                            Add another filter
-                        </a>
-                   </div>
-                </div>
-                <div class="stats pt-3 col-12 actions pb-4">actions</div>
-                <div class="actions mb-4">
-                    <button type="button" class="btn">
-                        Puch Notications
-                    </button>
-                    <button type="button" class="btn">
-                        Send A Reward
-                    </button>
-                    <button type="button" class="btn">
-                        Add Punches
-                    </button>
-                    <button type="button" class="btn">
-                        Export
-                    </button>
-                </div>
+        <div class="d-grid">
+          <div *ngIf="showFilter">
+            <button
+              type="button"
+              class="btn col-12"
+              id="dropdownMenuB"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              {{ selectText }}
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuB">
+              <span>
+                <img src="./assets/img/Icon feather-search.png" alt="" />
+              </span>
+              <input
+                class="form-control"
+                type="text"
+                name="search"
+                [(ngModel)]="searchText"
+                autocomplete="off"
+                placeholder="Search Trips"
+              />
+              <p>All properties</p>
+              <hr />
+              <a
+                class="dropdown-item"
+                (click)="searchTextVal(item.name)"
+                *ngFor="let item of orders | filter: searchText"
+                >{{ item.name }}</a
+              >
             </div>
-            <div class="customers__dataTable table-responsive">
-                <div id="scrollableContent">
-                    <app-data-table></app-data-table>
-                </div>
-            </div>
+          </div>
+
+          <a *ngIf="!showFilter" (click)="changeStatus()">
+            <img
+              src="./assets/img/Icon ionic-ios-add-circle-outline.png"
+              alt=""
+            />
+            Add another filter
+          </a>
         </div>
+      </div>
+      <div class="stats pt-3 col-12 actions pb-4">actions</div>
+      <div class="actions mb-4">
+        <button type="button" class="btn">Puch Notications</button>
+        <button type="button" class="btn">Send A Reward</button>
+        <button type="button" class="btn">Add Punches</button>
+        <button type="button" class="btn">Export</button>
+      </div>
+      <div class="customers__dataTable w-100">
+        <app-data-table></app-data-table>
+      </div>
     </div>
+  </div>
 </div>
