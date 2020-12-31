@@ -9,26 +9,23 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { CustomerProvider } from '../../providers/customers.provider';
 import { DataTableModule } from '../data-table/data-table.module';
 
-
 @NgModule({
-    declarations: [CustomersComponent],
-    imports: [
-        CommonModule,
-        FormsModule,
-        NgbModule,
-        ReactiveFormsModule,
-        DataTablesModule,
-        DataTableModule,
-        BarChartModule,
-        Ng2SearchPipeModule,
-        CommonModule,
-        
-    ],
-    exports: [CustomersComponent],
-    providers: [
-        {
-            provide: CustomerProvider,
-        },
-    ],
+  declarations: [CustomersComponent],
+  imports: [
+    CommonModule,
+    FormsModule,
+    Ng2SearchPipeModule,
+    NgbModule,
+    ReactiveFormsModule,
+    DataTableModule,
+    BarChartModule,
+    DataTablesModule,
+  ],
+  exports: [CustomersComponent],
+  providers: [
+    {
+      provide: CustomerProvider,
+    },
+  ],
 })
 export class CustomersModule {}
