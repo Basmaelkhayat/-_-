@@ -21,7 +21,7 @@
         padding: 0.8em 1em 0.8em 1em;
         color: #626262 !important;
         transition: none !important;
-        margin: 0em 3em 0em 1em;
+        margin: 0em 1em 0em 1em;
         font-weight: 700;
       }
       .nav-tabs .nav-link:hover,
@@ -36,8 +36,12 @@
   }
   .tab-content {
     background-color: #f7f7fc !important;
+    #nav-member {
+      padding: 0rem !important;
+      margin: 3.5em 0.5em;
+    }
     .tab-pane {
-      margin: 3em 0em;
+      margin: 3.5em 2em;
       padding: 1.5rem !important;
     }
   }

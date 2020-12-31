@@ -4,9 +4,44 @@
       padding-left: 0;
     }
   }
+  @media only screen and (max-width: 768px) {
+    .none_padding_left:nth-child(even),
+    .last-card {
+      padding: 0;
+    }
+  }
   @media only screen and (max-width: 600px) {
     .none_padding_right {
       padding-left: 0;
+    }
+  }
+  .date-pickers {
+    display: flex;
+    ::ng-deep .dropdown-menu {
+      transform: translate(-115px, 36px) !important;
+      will-change: auto !important;
+    }
+    .date-time-btn {
+      padding: 0;
+      border: 0;
+      outline: 0;
+      background-color: transparent;
+      padding-right: 10px;
+    }
+    .date-picker-input {
+      max-width: 120px;
+
+      background-color: white;
+      border: 1px solid #c4c4c4;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      input {
+        background-color: transparent;
+        border: 0;
+        outline: none;
+        box-shadow: none;
+      }
     }
   }
   &__topCustomers {
@@ -187,6 +222,15 @@
       }
     }
     &__MonthlyBranch {
+      @media only screen and (max-width: 900px) {
+        padding: 0;
+      }
+      .revenue {
+        text-align: end;
+        display: flex;
+        place-self: flex-end;
+        margin-bottom: 1em;
+      }
       &__cards {
         .card {
           background-color: #f8f8f8;
@@ -194,6 +238,13 @@
       }
     }
     &__punches {
+      &__content {
+        #scrollableContent {
+          height: 24em;
+        }
+      }
+    }
+    &__downloads {
       &__content {
         #scrollableContent {
           height: 24em;

@@ -3,7 +3,8 @@
   <app-sidebar></app-sidebar>
 
   <!-- here goes the components -->
-  <div class="component px-5 py-4">
+  <div class="component px-5 py-4"
+  [style.padding]="getMemberPadding()">
     <router-outlet></router-outlet>
   </div>
 </div>

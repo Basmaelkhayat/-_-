@@ -4,7 +4,7 @@
       <div class="card card-stats">
         <div class="card-body">
           <div class="stats">
-            <p class="card-title">Total spent</p>
+            <p class="card-title">Total Spent</p>
           </div>
         </div>
         <div class="pl-3">
@@ -18,7 +18,7 @@
       <div class="card card-stats">
         <div class="card-body">
           <div class="stats">
-            <p class="card-title">Total visits</p>
+            <p class="card-title">Loyalty Only Visits</p>
           </div>
         </div>
         <div class="pl-3">
@@ -32,7 +32,7 @@
       <div class="card card-stats">
         <div class="card-body">
           <div class="stats">
-            <p class="card-title">Total punches</p>
+            <p class="card-title">Payment Transactions</p>
           </div>
         </div>
         <div class="pl-3">
@@ -46,7 +46,7 @@
       <div class="card card-stats">
         <div class="card-body">
           <div class="stats">
-            <p class="card-title">Redeemed rewards</p>
+            <p class="card-title">Same Users of different branches</p>
           </div>
         </div>
         <div class="pl-3">
@@ -56,11 +56,11 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 none_padding_left">
+    <div class="col-lg-6 col-md-12 col-sm-6 none_padding_left last-card ">
       <div class="card card-stats">
         <div class="card-body">
           <div class="stats">
-            <p class="card-title">Redeemed rewards</p>
+            <p class="card-title">Same Users of different merchants</p>
           </div>
         </div>
         <div class="pl-3">
@@ -70,13 +70,100 @@
         </div>
       </div>
     </div>
-    <div
-      class="col-lg-12 col-md-12 col-12 none_padding_left member__mainContent__MonthlyBranch"
+    <div class="col-lg-12 col-md-12 col-12 none_padding_left 
+      member__mainContent__MonthlyBranch"
     >
       <div class="card card-stats">
-        <div class="card-body">
+        <div class="card-body revenue">
           <div class="stats">
-            <p class="card-title">Redeemed rewards</p>
+            <div class="date-pickers ml-2">
+              <div class="input-group date-picker-input">
+                <input
+                  class="form-control"
+                  placeholder="To"
+                  name="revenueTo"
+                  ngbDatepicker
+                  #revenueTo="ngbDatepicker"
+                  (click)="revenueTo.toggle()"
+                  readonly="readonly"
+                />
+                <div class="input-group-append">
+                  <button
+                    class="date-time-btn"
+                    (click)="revenueTo.toggle()"
+                    type="button"
+                  >
+                    <span class="calendar-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="17.99"
+                        height="17.24"
+                        viewBox="0 0 17.99 17.24"
+                      >
+                        <path
+                          id="Path_2987"
+                          data-name="Path 2987"
+                          d="M1.124,5.7V17.192a1.137,1.137,0,0,0,1.124,1.149H15.741a1.137,1.137,0,0,0,1.124-1.149V5.7ZM2.249,2.25A2.274,2.274,0,0,0,0,4.549V17.192a2.274,2.274,0,0,0,2.249,2.3H15.741a2.274,2.274,0,0,0,2.249-2.3V4.549a2.274,2.274,0,0,0-2.249-2.3Z"
+                          transform="translate(0 -2.25)"
+                          fill="#009f87"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          id="Path_2989"
+                          data-name="Path 2989"
+                          d="M17.544,13.875c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H18.219c-.373,0-.675-.168-.675-.375Zm-4.048,0c0-.207.3-.375.675-.375H15.52c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H14.171c-.373,0-.675-.168-.675-.375ZM6.75,16.123c0-.207.3-.375.675-.375H8.774c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H7.425c-.373,0-.675-.168-.675-.375Zm4.048,0c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H11.472c-.373,0-.675-.168-.675-.375Z"
+                          transform="translate(-4.501 -6.481)"
+                          fill="#009f87"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div class="input-group date-picker-input ml-2">
+                <input
+                  class="form-control"
+                  placeholder="From"
+                  name="revenueFrom"
+                  ngbDatepicker
+                  #revenueFrom="ngbDatepicker"
+                  (click)="revenueFrom.toggle()"
+                  readonly="readonly"
+                />
+                <div class="input-group-append">
+                  <button
+                    class="date-time-btn"
+                    (click)="revenueFrom.toggle()"
+                    type="button"
+                  >
+                    <span class="calendar-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="17.99"
+                        height="17.24"
+                        viewBox="0 0 17.99 17.24"
+                      >
+                        <path
+                          id="Path_2987"
+                          data-name="Path 2987"
+                          d="M1.124,5.7V17.192a1.137,1.137,0,0,0,1.124,1.149H15.741a1.137,1.137,0,0,0,1.124-1.149V5.7ZM2.249,2.25A2.274,2.274,0,0,0,0,4.549V17.192a2.274,2.274,0,0,0,2.249,2.3H15.741a2.274,2.274,0,0,0,2.249-2.3V4.549a2.274,2.274,0,0,0-2.249-2.3Z"
+                          transform="translate(0 -2.25)"
+                          fill="#009f87"
+                          fill-rule="evenodd"
+                        />
+                        <path
+                          id="Path_2989"
+                          data-name="Path 2989"
+                          d="M17.544,13.875c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H18.219c-.373,0-.675-.168-.675-.375Zm-4.048,0c0-.207.3-.375.675-.375H15.52c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H14.171c-.373,0-.675-.168-.675-.375ZM6.75,16.123c0-.207.3-.375.675-.375H8.774c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H7.425c-.373,0-.675-.168-.675-.375Zm4.048,0c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H11.472c-.373,0-.675-.168-.675-.375Z"
+                          transform="translate(-4.501 -6.481)"
+                          fill="#009f87"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="row member__mainContent__MonthlyBranch__cards">
@@ -84,7 +171,7 @@
             <div class="card card-stats">
               <div class="card-body">
                 <div class="stats">
-                  <p class="card-title">TOTAL TRANSACTIONS</p>
+                  <p class="card-title">Total Monthly Recurring Revenue</p>
                 </div>
                 <div class="stats__header">
                   <i
@@ -112,7 +199,8 @@
             <div class="card card-stats">
               <div class="card-body">
                 <div class="stats">
-                  <p class="card-title">TOTAL TRANSACTIONS</p>
+                  <p class="card-title">
+                    This Month’s New Revenue </p>
                 </div>
                 <div class="stats__header">
                   <i
@@ -204,8 +292,96 @@
   <div class="col-lg-6 col-md-12 member__mainContent__monthly">
     <div class="card card-stats">
       <div class="card-body">
-        <div class="stats">
+        <div class="d-flex justify-content-between align-items-center">
           <p class="card-title">Monthly Recurring Revenue</p>
+          <div class="date-pickers ml-2">
+            <div class="input-group date-picker-input">
+              <input
+                class="form-control"
+                placeholder="To"
+                name="montlyTo"
+                ngbDatepicker
+                #montlyTo="ngbDatepicker"
+                (click)="montlyTo.toggle()"
+                readonly="readonly"
+              />
+              <div class="input-group-append">
+                <button
+                  class="date-time-btn"
+                  (click)="montlyTo.toggle()"
+                  type="button"
+                >
+                  <span class="calendar-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17.99"
+                      height="17.24"
+                      viewBox="0 0 17.99 17.24"
+                    >
+                      <path
+                        id="Path_2987"
+                        data-name="Path 2987"
+                        d="M1.124,5.7V17.192a1.137,1.137,0,0,0,1.124,1.149H15.741a1.137,1.137,0,0,0,1.124-1.149V5.7ZM2.249,2.25A2.274,2.274,0,0,0,0,4.549V17.192a2.274,2.274,0,0,0,2.249,2.3H15.741a2.274,2.274,0,0,0,2.249-2.3V4.549a2.274,2.274,0,0,0-2.249-2.3Z"
+                        transform="translate(0 -2.25)"
+                        fill="#009f87"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        id="Path_2989"
+                        data-name="Path 2989"
+                        d="M17.544,13.875c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H18.219c-.373,0-.675-.168-.675-.375Zm-4.048,0c0-.207.3-.375.675-.375H15.52c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H14.171c-.373,0-.675-.168-.675-.375ZM6.75,16.123c0-.207.3-.375.675-.375H8.774c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H7.425c-.373,0-.675-.168-.675-.375Zm4.048,0c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H11.472c-.373,0-.675-.168-.675-.375Z"
+                        transform="translate(-4.501 -6.481)"
+                        fill="#009f87"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="input-group date-picker-input ml-2">
+              <input
+                class="form-control"
+                placeholder="From"
+                name="montlyFrom"
+                ngbDatepicker
+                #montlyFrom="ngbDatepicker"
+                (click)="montlyFrom.toggle()"
+                readonly="readonly"
+              />
+              <div class="input-group-append">
+                <button
+                  class="date-time-btn"
+                  (click)="montlyFrom.toggle()"
+                  type="button"
+                >
+                  <span class="calendar-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17.99"
+                      height="17.24"
+                      viewBox="0 0 17.99 17.24"
+                    >
+                      <path
+                        id="Path_2987"
+                        data-name="Path 2987"
+                        d="M1.124,5.7V17.192a1.137,1.137,0,0,0,1.124,1.149H15.741a1.137,1.137,0,0,0,1.124-1.149V5.7ZM2.249,2.25A2.274,2.274,0,0,0,0,4.549V17.192a2.274,2.274,0,0,0,2.249,2.3H15.741a2.274,2.274,0,0,0,2.249-2.3V4.549a2.274,2.274,0,0,0-2.249-2.3Z"
+                        transform="translate(0 -2.25)"
+                        fill="#009f87"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        id="Path_2989"
+                        data-name="Path 2989"
+                        d="M17.544,13.875c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H18.219c-.373,0-.675-.168-.675-.375Zm-4.048,0c0-.207.3-.375.675-.375H15.52c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H14.171c-.373,0-.675-.168-.675-.375ZM6.75,16.123c0-.207.3-.375.675-.375H8.774c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H7.425c-.373,0-.675-.168-.675-.375Zm4.048,0c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H11.472c-.373,0-.675-.168-.675-.375Z"
+                        transform="translate(-4.501 -6.481)"
+                        fill="#009f87"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="member__mainContent__monthly__content">
@@ -217,9 +393,97 @@
   </div>
   <div class="col-lg-6 col-md-12 p-0 m-0 member__mainContent__activityTable">
     <div class="card card-stats">
-      <div class="card-body">
-        <div class="stats">
+      <div class="card-body revenue">
+        <div class="d-flex justify-content-between align-items-center">
           <p class="card-title">Active users</p>
+          <div class="date-pickers ml-2">
+            <div class="input-group date-picker-input">
+              <input
+                class="form-control"
+                placeholder="To"
+                name="activeUser"
+                ngbDatepicker
+                #activeUser="ngbDatepicker"
+                (click)="activeUser.toggle()"
+                readonly="readonly"
+              />
+              <div class="input-group-append">
+                <button
+                  class="date-time-btn"
+                  (click)="activeUser.toggle()"
+                  type="button"
+                >
+                  <span class="calendar-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17.99"
+                      height="17.24"
+                      viewBox="0 0 17.99 17.24"
+                    >
+                      <path
+                        id="Path_2987"
+                        data-name="Path 2987"
+                        d="M1.124,5.7V17.192a1.137,1.137,0,0,0,1.124,1.149H15.741a1.137,1.137,0,0,0,1.124-1.149V5.7ZM2.249,2.25A2.274,2.274,0,0,0,0,4.549V17.192a2.274,2.274,0,0,0,2.249,2.3H15.741a2.274,2.274,0,0,0,2.249-2.3V4.549a2.274,2.274,0,0,0-2.249-2.3Z"
+                        transform="translate(0 -2.25)"
+                        fill="#009f87"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        id="Path_2989"
+                        data-name="Path 2989"
+                        d="M17.544,13.875c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H18.219c-.373,0-.675-.168-.675-.375Zm-4.048,0c0-.207.3-.375.675-.375H15.52c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H14.171c-.373,0-.675-.168-.675-.375ZM6.75,16.123c0-.207.3-.375.675-.375H8.774c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H7.425c-.373,0-.675-.168-.675-.375Zm4.048,0c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H11.472c-.373,0-.675-.168-.675-.375Z"
+                        transform="translate(-4.501 -6.481)"
+                        fill="#009f87"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="input-group date-picker-input ml-2">
+              <input
+                class="form-control"
+                placeholder="From"
+                name="activeUserFrom"
+                ngbDatepicker
+                #activeUserFrom="ngbDatepicker"
+                (click)="activeUserFrom.toggle()"
+                readonly="readonly"
+              />
+              <div class="input-group-append">
+                <button
+                  class="date-time-btn"
+                  (click)="activeUserFrom.toggle()"
+                  type="button"
+                >
+                  <span class="calendar-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17.99"
+                      height="17.24"
+                      viewBox="0 0 17.99 17.24"
+                    >
+                      <path
+                        id="Path_2987"
+                        data-name="Path 2987"
+                        d="M1.124,5.7V17.192a1.137,1.137,0,0,0,1.124,1.149H15.741a1.137,1.137,0,0,0,1.124-1.149V5.7ZM2.249,2.25A2.274,2.274,0,0,0,0,4.549V17.192a2.274,2.274,0,0,0,2.249,2.3H15.741a2.274,2.274,0,0,0,2.249-2.3V4.549a2.274,2.274,0,0,0-2.249-2.3Z"
+                        transform="translate(0 -2.25)"
+                        fill="#009f87"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        id="Path_2989"
+                        data-name="Path 2989"
+                        d="M17.544,13.875c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H18.219c-.373,0-.675-.168-.675-.375Zm-4.048,0c0-.207.3-.375.675-.375H15.52c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H14.171c-.373,0-.675-.168-.675-.375ZM6.75,16.123c0-.207.3-.375.675-.375H8.774c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H7.425c-.373,0-.675-.168-.675-.375Zm4.048,0c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H11.472c-.373,0-.675-.168-.675-.375Z"
+                        transform="translate(-4.501 -6.481)"
+                        fill="#009f87"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="member__mainContent__activityTable__content">
@@ -230,8 +494,96 @@
   <div class="col-lg-12 col-md-12 p-0 m-0 member__mainContent__activityUser">
     <div class="card card-stats">
       <div class="card-body">
-        <div class="stats">
-          <p class="card-title">Active users</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <p class="card-title">Zeal General Activity Chart</p>
+          <div class="date-pickers ml-2">
+            <div class="input-group date-picker-input">
+              <input
+                class="form-control"
+                placeholder="To"
+                name="ZealTo"
+                ngbDatepicker
+                #ZealTo="ngbDatepicker"
+                (click)="ZealTo.toggle()"
+                readonly="readonly"
+              />
+              <div class="input-group-append">
+                <button
+                  class="date-time-btn"
+                  (click)="ZealTo.toggle()"
+                  type="button"
+                >
+                  <span class="calendar-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17.99"
+                      height="17.24"
+                      viewBox="0 0 17.99 17.24"
+                    >
+                      <path
+                        id="Path_2987"
+                        data-name="Path 2987"
+                        d="M1.124,5.7V17.192a1.137,1.137,0,0,0,1.124,1.149H15.741a1.137,1.137,0,0,0,1.124-1.149V5.7ZM2.249,2.25A2.274,2.274,0,0,0,0,4.549V17.192a2.274,2.274,0,0,0,2.249,2.3H15.741a2.274,2.274,0,0,0,2.249-2.3V4.549a2.274,2.274,0,0,0-2.249-2.3Z"
+                        transform="translate(0 -2.25)"
+                        fill="#009f87"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        id="Path_2989"
+                        data-name="Path 2989"
+                        d="M17.544,13.875c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H18.219c-.373,0-.675-.168-.675-.375Zm-4.048,0c0-.207.3-.375.675-.375H15.52c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H14.171c-.373,0-.675-.168-.675-.375ZM6.75,16.123c0-.207.3-.375.675-.375H8.774c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H7.425c-.373,0-.675-.168-.675-.375Zm4.048,0c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H11.472c-.373,0-.675-.168-.675-.375Z"
+                        transform="translate(-4.501 -6.481)"
+                        fill="#009f87"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="input-group date-picker-input ml-2">
+              <input
+                class="form-control"
+                placeholder="From"
+                name="ZealFrom"
+                ngbDatepicker
+                #ZealFrom="ngbDatepicker"
+                (click)="ZealFrom.toggle()"
+                readonly="readonly"
+              />
+              <div class="input-group-append">
+                <button
+                  class="date-time-btn"
+                  (click)="ZealFrom.toggle()"
+                  type="button"
+                >
+                  <span class="calendar-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17.99"
+                      height="17.24"
+                      viewBox="0 0 17.99 17.24"
+                    >
+                      <path
+                        id="Path_2987"
+                        data-name="Path 2987"
+                        d="M1.124,5.7V17.192a1.137,1.137,0,0,0,1.124,1.149H15.741a1.137,1.137,0,0,0,1.124-1.149V5.7ZM2.249,2.25A2.274,2.274,0,0,0,0,4.549V17.192a2.274,2.274,0,0,0,2.249,2.3H15.741a2.274,2.274,0,0,0,2.249-2.3V4.549a2.274,2.274,0,0,0-2.249-2.3Z"
+                        transform="translate(0 -2.25)"
+                        fill="#009f87"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        id="Path_2989"
+                        data-name="Path 2989"
+                        d="M17.544,13.875c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H18.219c-.373,0-.675-.168-.675-.375Zm-4.048,0c0-.207.3-.375.675-.375H15.52c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H14.171c-.373,0-.675-.168-.675-.375ZM6.75,16.123c0-.207.3-.375.675-.375H8.774c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H7.425c-.373,0-.675-.168-.675-.375Zm4.048,0c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H11.472c-.373,0-.675-.168-.675-.375Z"
+                        transform="translate(-4.501 -6.481)"
+                        fill="#009f87"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="member__mainContent__activityUser__content">
@@ -242,8 +594,96 @@
   <div class="col-lg-4 col-md-12 member__mainContent__merchants">
     <div class="card card-stats">
       <div class="card-body">
-        <div class="stats">
+        <div class="d-flex justify-content-between align-items-center">
           <p class="card-title">Top Active Merchants</p>
+          <div class="date-pickers ml-2">
+            <div class="input-group date-picker-input">
+              <input
+                class="form-control"
+                placeholder="To"
+                name="merchantTo"
+                ngbDatepicker
+                #merchantTo="ngbDatepicker"
+                (click)="merchantTo.toggle()"
+                readonly="readonly"
+              />
+              <div class="input-group-append">
+                <button
+                  class="date-time-btn"
+                  (click)="merchantTo.toggle()"
+                  type="button"
+                >
+                  <span class="calendar-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17.99"
+                      height="17.24"
+                      viewBox="0 0 17.99 17.24"
+                    >
+                      <path
+                        id="Path_2987"
+                        data-name="Path 2987"
+                        d="M1.124,5.7V17.192a1.137,1.137,0,0,0,1.124,1.149H15.741a1.137,1.137,0,0,0,1.124-1.149V5.7ZM2.249,2.25A2.274,2.274,0,0,0,0,4.549V17.192a2.274,2.274,0,0,0,2.249,2.3H15.741a2.274,2.274,0,0,0,2.249-2.3V4.549a2.274,2.274,0,0,0-2.249-2.3Z"
+                        transform="translate(0 -2.25)"
+                        fill="#009f87"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        id="Path_2989"
+                        data-name="Path 2989"
+                        d="M17.544,13.875c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H18.219c-.373,0-.675-.168-.675-.375Zm-4.048,0c0-.207.3-.375.675-.375H15.52c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H14.171c-.373,0-.675-.168-.675-.375ZM6.75,16.123c0-.207.3-.375.675-.375H8.774c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H7.425c-.373,0-.675-.168-.675-.375Zm4.048,0c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H11.472c-.373,0-.675-.168-.675-.375Z"
+                        transform="translate(-4.501 -6.481)"
+                        fill="#009f87"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="input-group date-picker-input ml-2">
+              <input
+                class="form-control"
+                placeholder="From"
+                name="merchantFrom"
+                ngbDatepicker
+                #merchantFrom="ngbDatepicker"
+                (click)="merchantFrom.toggle()"
+                readonly="readonly"
+              />
+              <div class="input-group-append">
+                <button
+                  class="date-time-btn"
+                  (click)="merchantFrom.toggle()"
+                  type="button"
+                >
+                  <span class="calendar-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17.99"
+                      height="17.24"
+                      viewBox="0 0 17.99 17.24"
+                    >
+                      <path
+                        id="Path_2987"
+                        data-name="Path 2987"
+                        d="M1.124,5.7V17.192a1.137,1.137,0,0,0,1.124,1.149H15.741a1.137,1.137,0,0,0,1.124-1.149V5.7ZM2.249,2.25A2.274,2.274,0,0,0,0,4.549V17.192a2.274,2.274,0,0,0,2.249,2.3H15.741a2.274,2.274,0,0,0,2.249-2.3V4.549a2.274,2.274,0,0,0-2.249-2.3Z"
+                        transform="translate(0 -2.25)"
+                        fill="#009f87"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        id="Path_2989"
+                        data-name="Path 2989"
+                        d="M17.544,13.875c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H18.219c-.373,0-.675-.168-.675-.375Zm-4.048,0c0-.207.3-.375.675-.375H15.52c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H14.171c-.373,0-.675-.168-.675-.375ZM6.75,16.123c0-.207.3-.375.675-.375H8.774c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H7.425c-.373,0-.675-.168-.675-.375Zm4.048,0c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H11.472c-.373,0-.675-.168-.675-.375Z"
+                        transform="translate(-4.501 -6.481)"
+                        fill="#009f87"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="member__mainContent__merchants__content">
@@ -256,8 +696,96 @@
   <div class="col-lg-8 col-md-12 p-0 m-0 member__mainContent__downloads">
     <div class="card card-stats">
       <div class="card-body">
-        <div class="stats">
+        <div class="d-flex justify-content-between align-items-center">
           <p class="card-title">Downloads</p>
+          <div class="date-pickers ml-2">
+            <div class="input-group date-picker-input">
+              <input
+                class="form-control"
+                placeholder="To"
+                name="downloadTo"
+                ngbDatepicker
+                #downloadTo="ngbDatepicker"
+                (click)="downloadTo.toggle()"
+                readonly="readonly"
+              />
+              <div class="input-group-append">
+                <button
+                  class="date-time-btn"
+                  (click)="downloadTo.toggle()"
+                  type="button"
+                >
+                  <span class="calendar-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17.99"
+                      height="17.24"
+                      viewBox="0 0 17.99 17.24"
+                    >
+                      <path
+                        id="Path_2987"
+                        data-name="Path 2987"
+                        d="M1.124,5.7V17.192a1.137,1.137,0,0,0,1.124,1.149H15.741a1.137,1.137,0,0,0,1.124-1.149V5.7ZM2.249,2.25A2.274,2.274,0,0,0,0,4.549V17.192a2.274,2.274,0,0,0,2.249,2.3H15.741a2.274,2.274,0,0,0,2.249-2.3V4.549a2.274,2.274,0,0,0-2.249-2.3Z"
+                        transform="translate(0 -2.25)"
+                        fill="#009f87"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        id="Path_2989"
+                        data-name="Path 2989"
+                        d="M17.544,13.875c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H18.219c-.373,0-.675-.168-.675-.375Zm-4.048,0c0-.207.3-.375.675-.375H15.52c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H14.171c-.373,0-.675-.168-.675-.375ZM6.75,16.123c0-.207.3-.375.675-.375H8.774c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H7.425c-.373,0-.675-.168-.675-.375Zm4.048,0c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H11.472c-.373,0-.675-.168-.675-.375Z"
+                        transform="translate(-4.501 -6.481)"
+                        fill="#009f87"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="input-group date-picker-input ml-2">
+              <input
+                class="form-control"
+                placeholder="From"
+                name="downloadFrom"
+                ngbDatepicker
+                #downloadFrom="ngbDatepicker"
+                (click)="downloadFrom.toggle()"
+                readonly="readonly"
+              />
+              <div class="input-group-append">
+                <button
+                  class="date-time-btn"
+                  (click)="downloadFrom.toggle()"
+                  type="button"
+                >
+                  <span class="calendar-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17.99"
+                      height="17.24"
+                      viewBox="0 0 17.99 17.24"
+                    >
+                      <path
+                        id="Path_2987"
+                        data-name="Path 2987"
+                        d="M1.124,5.7V17.192a1.137,1.137,0,0,0,1.124,1.149H15.741a1.137,1.137,0,0,0,1.124-1.149V5.7ZM2.249,2.25A2.274,2.274,0,0,0,0,4.549V17.192a2.274,2.274,0,0,0,2.249,2.3H15.741a2.274,2.274,0,0,0,2.249-2.3V4.549a2.274,2.274,0,0,0-2.249-2.3Z"
+                        transform="translate(0 -2.25)"
+                        fill="#009f87"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        id="Path_2989"
+                        data-name="Path 2989"
+                        d="M17.544,13.875c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H18.219c-.373,0-.675-.168-.675-.375Zm-4.048,0c0-.207.3-.375.675-.375H15.52c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H14.171c-.373,0-.675-.168-.675-.375ZM6.75,16.123c0-.207.3-.375.675-.375H8.774c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H7.425c-.373,0-.675-.168-.675-.375Zm4.048,0c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H11.472c-.373,0-.675-.168-.675-.375Z"
+                        transform="translate(-4.501 -6.481)"
+                        fill="#009f87"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="member__mainContent__downloads__content">
@@ -271,7 +799,7 @@
     <div class="card card-stats">
       <div class="card-body">
         <div class="stats">
-          <p class="card-title">gender distribution </p>
+          <p class="card-title">gender distribution  </p>
         </div>
       </div>
       <div class="member__mainContent__gender__content">
@@ -284,8 +812,96 @@
   <div class="col-lg-9 col-md-12 p-0 m-0 member__mainContent__punches">
     <div class="card card-stats">
       <div class="card-body">
-        <div class="stats">
+        <div class="d-flex justify-content-between align-items-center">
           <p class="card-title">Punches</p>
+          <div class="date-pickers ml-2">
+            <div class="input-group date-picker-input">
+              <input
+                class="form-control"
+                placeholder="To"
+                name="punchesTo"
+                ngbDatepicker
+                #punchesTo="ngbDatepicker"
+                (click)="punchesTo.toggle()"
+                readonly="readonly"
+              />
+              <div class="input-group-append">
+                <button
+                  class="date-time-btn"
+                  (click)="punchesTo.toggle()"
+                  type="button"
+                >
+                  <span class="calendar-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17.99"
+                      height="17.24"
+                      viewBox="0 0 17.99 17.24"
+                    >
+                      <path
+                        id="Path_2987"
+                        data-name="Path 2987"
+                        d="M1.124,5.7V17.192a1.137,1.137,0,0,0,1.124,1.149H15.741a1.137,1.137,0,0,0,1.124-1.149V5.7ZM2.249,2.25A2.274,2.274,0,0,0,0,4.549V17.192a2.274,2.274,0,0,0,2.249,2.3H15.741a2.274,2.274,0,0,0,2.249-2.3V4.549a2.274,2.274,0,0,0-2.249-2.3Z"
+                        transform="translate(0 -2.25)"
+                        fill="#009f87"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        id="Path_2989"
+                        data-name="Path 2989"
+                        d="M17.544,13.875c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H18.219c-.373,0-.675-.168-.675-.375Zm-4.048,0c0-.207.3-.375.675-.375H15.52c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H14.171c-.373,0-.675-.168-.675-.375ZM6.75,16.123c0-.207.3-.375.675-.375H8.774c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H7.425c-.373,0-.675-.168-.675-.375Zm4.048,0c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H11.472c-.373,0-.675-.168-.675-.375Z"
+                        transform="translate(-4.501 -6.481)"
+                        fill="#009f87"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="input-group date-picker-input ml-2">
+              <input
+                class="form-control"
+                placeholder="From"
+                name="punchesFrom"
+                ngbDatepicker
+                #punchesFrom="ngbDatepicker"
+                (click)="punchesFrom.toggle()"
+                readonly="readonly"
+              />
+              <div class="input-group-append">
+                <button
+                  class="date-time-btn"
+                  (click)="punchesFrom.toggle()"
+                  type="button"
+                >
+                  <span class="calendar-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17.99"
+                      height="17.24"
+                      viewBox="0 0 17.99 17.24"
+                    >
+                      <path
+                        id="Path_2987"
+                        data-name="Path 2987"
+                        d="M1.124,5.7V17.192a1.137,1.137,0,0,0,1.124,1.149H15.741a1.137,1.137,0,0,0,1.124-1.149V5.7ZM2.249,2.25A2.274,2.274,0,0,0,0,4.549V17.192a2.274,2.274,0,0,0,2.249,2.3H15.741a2.274,2.274,0,0,0,2.249-2.3V4.549a2.274,2.274,0,0,0-2.249-2.3Z"
+                        transform="translate(0 -2.25)"
+                        fill="#009f87"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        id="Path_2989"
+                        data-name="Path 2989"
+                        d="M17.544,13.875c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H18.219c-.373,0-.675-.168-.675-.375Zm-4.048,0c0-.207.3-.375.675-.375H15.52c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H14.171c-.373,0-.675-.168-.675-.375ZM6.75,16.123c0-.207.3-.375.675-.375H8.774c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H7.425c-.373,0-.675-.168-.675-.375Zm4.048,0c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H11.472c-.373,0-.675-.168-.675-.375Z"
+                        transform="translate(-4.501 -6.481)"
+                        fill="#009f87"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="member__mainContent__punches__content">
