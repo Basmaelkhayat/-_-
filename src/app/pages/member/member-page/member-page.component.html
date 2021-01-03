@@ -1,47 +1,46 @@
-
 <div class="member">
-    <nav>
-        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <a
-                class="nav-item nav-link active"
-                id="nav-member-tab"
-                data-toggle="tab"
-                href="#nav-member"
-                role="tab"
-                aria-controls="nav-member"
-                aria-selected="true"
-            >
-            Members
-            </a>
-            <a
-                class="nav-item nav-link"
-                id="nav-chats-tab"
-                data-toggle="tab"
-                href="#nav-chats"
-                role="tab"
-                aria-controls="nav-chats"
-                aria-selected="false"
-            >
-                Punch Map            
-            </a>
-        </div>
-    </nav>
-    <div class="tab-content" id="nav-tabContent">
-        <div
-            class="tab-pane fade show active"
-            id="nav-member"
-            role="tabpanel"
-            aria-labelledby="nav-member-tab"
-        >
-            <app-customers></app-customers>
-        </div>
-        <div
-            class="tab-pane fade card"
-            id="nav-chats"
-            role="tabpanel"
-            aria-labelledby="nav-chats-tab"
-        >
-            <p>Members</p>
-        </div>
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a
+        class="nav-item nav-link active"
+        id="nav-member-tab"
+        data-toggle="tab"
+        href="#nav-member"
+        role="tab"
+        aria-controls="nav-member"
+        aria-selected="true"
+      >
+        Members
+      </a>
+      <a
+        class="nav-item nav-link"
+        id="nav-chats-tab"
+        data-toggle="tab"
+        href="#nav-chats"
+        role="tab"
+        aria-controls="nav-chats"
+        aria-selected="false"
+      >
+        Punch Map
+      </a>
     </div>
+  </nav>
+  <div class="tab-content pages-x-padding pages-y-padding" id="nav-tabContent">
+    <div
+      class="tab-pane fade show active"
+      id="nav-member"
+      role="tabpanel"
+      aria-labelledby="nav-member-tab"
+    >
+      <app-customers></app-customers>
+    </div>
+    <div
+      class="tab-pane fade card"
+      id="nav-chats"
+      role="tabpanel"
+      aria-labelledby="nav-chats-tab"
+    >
+      <p>Members</p>
+    </div>
+  </div>
 </div>

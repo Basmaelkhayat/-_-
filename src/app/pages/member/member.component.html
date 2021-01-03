@@ -1,258 +1,247 @@
-<div class="row p-0 m-0 member">
-    <div class="col-lg-3 col-md-12 col-sm-12 card">
-        <div class="member__topCustomers">
-            <div class="card-body card_margin col-lg-12 col-md-12 col-sm-12">
-                <div class="stats col-12 text-align-center">
-                    <div class="col-12 mt-4">
-                        <img
-                            [src]="data.image"
-                            *ngIf="data.image"
-                        />
-                        <span class="first-letter" *ngIf="!data.image">{{
-                            data.name.slice(0, 1)
-                        }}</span>
-                        <div class="col-12 member__topCustomers__buttons">
-                            <button type="button" class="btn btn-primary push">Top customer</button>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <h4 class="mt-3">{{data.name}}</h4>
-                    </div>
-                     <div class="col-12">
-                        <p class="mt-4 mb-2 name">Phone</p>
-                    </div>
-                    <div class="col-12">
-                        <p class="title">{{data.phone}}</p>
-                    </div>
-                    <div class="col-12 ">
-                        <p class="mt-4 mb-2 name">
-                            Email
-                        </p>
-                    </div>
-                    <div class=" col-12 ">
-                        <p class="title">
-                            {{data.email}}
-                        </p>
-                    </div> 
-                    <div class="col-12">
-                        <p class="mt-4 mb-2 name">Gender</p>
-                    </div>
-                    <div class="col-12">
-                        <p class="title">{{data.gender}}</p>
-                    </div>
-                    <div class="col-12">
-                        <p class="mt-4 mb-2 name">Date of birth</p>
-                    </div>
-                    <div class="col-12">
-                        <p class="title mb-2">{{data.date_of_birth}}</p>
-                    </div>
-                    <div class="col-12">
-                        <p class="days">Birthday In {{data.birthday_in}} Days!</p>
-                    </div>
-                   
-                    <div class="col-12">
-                        <p class="mt-4 mb-2 name">Most Visited merchent</p>
-                    </div>
-                    <div class="col-12">
-                        <p class="title">
-                            <!-- Batter half & co. -->
-                            ??
-                        </p>
-                    </div>
-                    
-                    <div class="col-12 ml-0 mb-4 member__topCustomers__buttons">
-                        <button type="button" class="btn btn-primary push ml-0 mt-4">
-                            Push notification
-                        </button>
-                    </div>
-                </div>
+<div class="row pages-x-padding pages-y-padding m-0 member" *ngIf="data">
+  <div class="col-lg-3 col-md-12 col-sm-12 card">
+    <div class="member__topCustomers">
+      <div class="card-body card_margin col-lg-12 col-md-12 col-sm-12">
+        <div class="stats col-12 text-align-center">
+          <div class="col-12 mt-4">
+            <img [src]="data?.image" *ngIf="data?.image" />
+            <span class="first-letter" *ngIf="!data?.image">{{
+              data.name.slice(0, 1)
+            }}</span>
+            <div class="col-12 member__topCustomers__buttons">
+              <button type="button" class="btn btn-primary push">
+                Top customer
+              </button>
             </div>
+          </div>
+          <div class="col-12">
+            <h4 class="mt-3">{{ data.name }}</h4>
+          </div>
+          <div class="col-12">
+            <p class="mt-4 mb-2 name">Phone</p>
+          </div>
+          <div class="col-12">
+            <p class="title">{{ data.phone }}</p>
+          </div>
+          <div class="col-12">
+            <p class="mt-4 mb-2 name">Email</p>
+          </div>
+          <div class="col-12">
+            <p class="title">
+              {{ data.email }}
+            </p>
+          </div>
+          <div class="col-12">
+            <p class="mt-4 mb-2 name">Gender</p>
+          </div>
+          <div class="col-12">
+            <p class="title">{{ data.gender }}</p>
+          </div>
+          <div class="col-12">
+            <p class="mt-4 mb-2 name">Date of birth</p>
+          </div>
+          <div class="col-12">
+            <p class="title mb-2">{{ data.date_of_birth }}</p>
+          </div>
+          <div class="col-12">
+            <p class="days">Birthday In {{ data.birthday_in }} Days!</p>
+          </div>
+
+          <div class="col-12">
+            <p class="mt-4 mb-2 name">Most Visited merchent</p>
+          </div>
+          <div class="col-12">
+            <p class="title">
+              <!-- Batter half & co. -->
+              ??
+            </p>
+          </div>
+
+          <div class="col-12 ml-0 mb-4 member__topCustomers__buttons">
+            <button type="button" class="btn btn-primary push ml-0 mt-4">
+              Push notification
+            </button>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="col-lg-9 col-md-12 col-12 p-0 m-0 row member__mainContent">
-        <div class="col-lg-3 col-md-6 col-sm-6 none_padding_right">
-            <div class="card card-stats">
-                <div class="card-body">
-                    <div class="stats">
-                        <p class="card-title">Total spent</p>
-                    </div>
-                </div>
-                <div class="pl-3">
-                    <h2 class="card-header">
-                        {{data.total_spent}}
-                    </h2>
-                </div>
-            </div>
+  </div>
+  <div class="col-lg-9 col-md-12 col-12 p-0 m-0 row member__mainContent">
+    <div class="col-lg-3 col-md-6 col-sm-6 none_padding_right">
+      <div class="card card-stats">
+        <div class="card-body">
+          <div class="stats">
+            <p class="card-title">Total spent</p>
+          </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 none_padding_right">
-            <div class="card card-stats">
-                <div class="card-body">
-                    <div class="stats">
-                        <p class="card-title">Total visits</p>
-                    </div>
-                </div>
-                <div class="pl-3">
-                    <h2 class="card-header">
-                        {{data.total_visits}}
-                    </h2>
-                </div>
-            </div>
+        <div class="pl-3">
+          <h2 class="card-header">
+            {{ data.total_spent }}
+          </h2>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 none_padding_right">
-            <div class="card card-stats">
-                <div class="card-body">
-                    <div class="stats">
-                        <p class="card-title">Total punches</p>
-                    </div>
-                </div>
-                <div class="pl-3">
-                    <h2 class="card-header">
-                        {{data.total_punches}}
-                    </h2>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 none_padding_right">
-            <div class="card card-stats">
-                <div class="card-body">
-                    <div class="stats">
-                        <p class="card-title">Redeemed rewards</p>
-                    </div>
-                </div>
-                <div class="pl-3">
-                    <h2 class="card-header">
-                        {{data.redeemed_rewards}}
-                    </h2>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 col-md-12 none_padding_right member__mainContent__bg">
-            <div class="card card-stats">
-                <div class="bg-head">
-                    <div class="card-body">
-                        <div class="stats">
-                            <p class="card-title">
-                                user punch map
-                            </p>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="member__mainContent__bg__brands">
-                    
-                    <div class="member__mainContent__bg__brands__p">
-                        <p>{{data.name}}</p>
-                    </div>
-                    <div class="member__mainContent__bg__brands__buttons" 
-                    *ngFor="let item of data.visits">
-                        <button type="button" class="btn btn-primary elsagher">
-                            <span>
-                                {{item.visits}}
-                            </span>
-                            {{item.merchant}}
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-8 col-md-12 none_padding_right member__mainContent__activityTable">
-            <div class="card card-stats">
-                <div class="card-body">
-                    <div class="stats">
-                        <p class="card-title">Activity </p>
-                    </div>
-                </div>
-                <div class="member__mainContent__activityTable__content table-responsive">
-                    <div id="scrollableContent">
-                        <table class="feed__table table">
-                            <thead>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>Merchent </td>
-                                    <td>type</td>
-                                    <td>value</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr *ngFor="let feed of data.activity" class="">
-                                    <td class="img-td">
-                                        <img
-                                            [src]="feed.photo"
-                                            *ngIf="feed.photo"
-                                            class="feed__avatar"
-                                        />
-                                        <span class="first-letter" *ngIf="!feed.photo">{{
-                                            feed.title.slice(0, 1)
-                                        }}</span>
-                                    </td>
-                                    <td class="title-td">{{feed.title}}</td> 
-                                    
-                                    <td class="feed__date-img">
-                                        <img
-                                            [src]="
-                                                feed.type == 'punch'
-                                                    ? 'assets/images/Icon feather-gift.png'
-                                                    : 'assets/images/Group 487.png'
-                                            "
-                                            alt=""
-                                        />
-                                    </td>
-                                    <td>
-                                        {{feed.merchant}}
-                                    </td>
-                                    <td>
-                                        {{feed.payment_type}}
-                                    </td>
-                                    <td class="value-td">
-                                        <p *ngIf="feed.value">
-                                            {{feed.value}}EGP
-                                        </p>
-                                        <p *ngIf="feed.value == null">
-                                            -
-                                        </p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-12 none_padding_right member__mainContent__punches">
-            <h5>
-                First punch
-            </h5>
-            <div class="card card-stats">
-                <div class="card-body">
-                    <div class="stats">
-                        <p class="card-title">{{data.first_punch}}</p>
-                    </div>
-                </div>
-            </div>
-            <h5>
-                Last Punch
-            </h5>
-            <div class="card card-stats">
-                <div class="card-body">
-                    <div class="stats">
-                        <p class="card-title">{{data.last_punch}}</p>
-                    </div>
-                </div>
-            </div>
-            <h5>
-                Average transaction amount
-            </h5>
-            <div class="card card-stats">
-                <div class="card-body">
-                    <div class="stats">
-                        <p class="card-title">{{data.avg_transaction_amount}}EGP
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
+      </div>
     </div>
+    <div class="col-lg-3 col-md-6 col-sm-6 none_padding_right">
+      <div class="card card-stats">
+        <div class="card-body">
+          <div class="stats">
+            <p class="card-title">Total visits</p>
+          </div>
+        </div>
+        <div class="pl-3">
+          <h2 class="card-header">
+            {{ data.total_visits }}
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6 none_padding_right">
+      <div class="card card-stats">
+        <div class="card-body">
+          <div class="stats">
+            <p class="card-title">Total punches</p>
+          </div>
+        </div>
+        <div class="pl-3">
+          <h2 class="card-header">
+            {{ data.total_punches }}
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6 none_padding_right">
+      <div class="card card-stats">
+        <div class="card-body">
+          <div class="stats">
+            <p class="card-title">Redeemed rewards</p>
+          </div>
+        </div>
+        <div class="pl-3">
+          <h2 class="card-header">
+            {{ data.redeemed_rewards }}
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12 col-md-12 none_padding_right member__mainContent__bg">
+      <div class="card card-stats">
+        <div class="bg-head">
+          <div class="card-body">
+            <div class="stats">
+              <p class="card-title">user punch map</p>
+            </div>
+          </div>
+        </div>
+        <div class="member__mainContent__bg__brands">
+          <div class="member__mainContent__bg__brands__p">
+            <p>{{ data.name }}</p>
+          </div>
+          <div
+            class="member__mainContent__bg__brands__buttons"
+            *ngFor="let item of data.visits"
+          >
+            <button type="button" class="btn btn-primary elsagher">
+              <span>
+                {{ item.visits }}
+              </span>
+              {{ item.merchant }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-lg-8 col-md-12 none_padding_right member__mainContent__activityTable"
+    >
+      <div class="card card-stats">
+        <div class="card-body">
+          <div class="stats">
+            <p class="card-title">Activity</p>
+          </div>
+        </div>
+        <div
+          class="member__mainContent__activityTable__content table-responsive"
+        >
+          <div id="scrollableContent">
+            <table class="feed__table table">
+              <thead>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>Merchent</td>
+                  <td>type</td>
+                  <td>value</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let feed of data.activity" class="">
+                  <td class="img-td">
+                    <img
+                      [src]="feed.photo"
+                      *ngIf="feed.photo"
+                      class="feed__avatar"
+                    />
+                    <span class="first-letter" *ngIf="!feed.photo">{{
+                      feed.title.slice(0, 1)
+                    }}</span>
+                  </td>
+                  <td class="title-td">{{ feed.title }}</td>
+
+                  <td class="feed__date-img">
+                    <img
+                      [src]="
+                        feed.type == 'punch'
+                          ? 'assets/images/Icon feather-gift.png'
+                          : 'assets/images/Group 487.png'
+                      "
+                      alt=""
+                    />
+                  </td>
+                  <td>
+                    {{ feed.merchant }}
+                  </td>
+                  <td>
+                    {{ feed.payment_type }}
+                  </td>
+                  <td class="value-td">
+                    <p *ngIf="feed.value">{{ feed.value }}EGP</p>
+                    <p *ngIf="feed.value == null">-</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-lg-4 col-md-12 none_padding_right member__mainContent__punches"
+    >
+      <h5>First punch</h5>
+      <div class="card card-stats">
+        <div class="card-body">
+          <div class="stats">
+            <p class="card-title">{{ data.first_punch }}</p>
+          </div>
+        </div>
+      </div>
+      <h5>Last Punch</h5>
+      <div class="card card-stats">
+        <div class="card-body">
+          <div class="stats">
+            <p class="card-title">{{ data.last_punch }}</p>
+          </div>
+        </div>
+      </div>
+      <h5>Average transaction amount</h5>
+      <div class="card card-stats">
+        <div class="card-body">
+          <div class="stats">
+            <p class="card-title">{{ data.avg_transaction_amount }}EGP</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
