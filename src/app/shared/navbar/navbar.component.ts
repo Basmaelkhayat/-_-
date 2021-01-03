@@ -14,21 +14,26 @@ export class NavbarComponent implements OnInit {
   constructor(private router: Router, private location: Location) {}
 
   getPathInfo() {
+    let pathLinks = [];
     if (this.location.path() != '') {
       this.route = this.location.path();
-      if (this.route.charAt(0) === '#') {
-        this.route = this.route.slice(1);
-      }
-      if (this.route.charAt(0) === '/') {
-        this.route = this.route.slice(1);
-      }
+      this.route = this.route.replace('#', '');
+      pathLinks = this.route.split('/').filter((link) => link != '');
 
-      if (this.location.path() == '/members/member-page') {
-        return { path: '', title: 'Member Page' };
-      }
-      return ROUTES.find((r) => r.path == this.route);
+      pathLinks.forEach((path, index, array) => {
+        let route = ROUTES.find((r) => r.path == path);
+        array[index] = route ? route : { path, title: path };
+      });
+      return pathLinks;
+      // if (this.route.charAt(0) === '#') {
+      //   this.route = this.route.slice(1);
+      // }
+      // if (this.route.charAt(0) === '/') {
+      //   this.route = this.route.slice(1);
+      // }
+    } else {
+      return [ROUTES[0]];
     }
-    return ROUTES[0];
   }
   ngOnInit(): void {}
 }

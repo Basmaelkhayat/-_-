@@ -33,6 +33,7 @@ export class MerchantComponent implements OnInit {
   getSales() {
     this.merchantService.getSales('a').subscribe((res) => {
       this.sales = res;
+      console.log(res);
     });
   }
   getTopRedeemed() {

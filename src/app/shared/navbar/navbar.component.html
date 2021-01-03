@@ -5,8 +5,30 @@
 
   <div class="navbar-user-side">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <span class="nav-link page-title">{{ getPathInfo().title }} </span>
+      <li class="nav-item active d-flex">
+        <a
+          class="nav-link page-title p-0"
+          *ngFor="let path of getPathInfo(); last as isLast"
+          [routerLink]="
+            !isLast ? path.path : getPathInfo()[0].path + '/' + path.path
+          "
+          >{{ path.title
+          }}<span *ngIf="!isLast" class="mx-2"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="6.224"
+              height="10.886"
+              viewBox="0 0 6.224 10.886"
+            >
+              <path
+                id="Icon_ionic-ios-arrow-down"
+                data-name="Icon ionic-ios-arrow-down"
+                d="M11.632,15.594l4.116-4.119a.775.775,0,0,1,1.1,0,.784.784,0,0,1,0,1.1l-4.664,4.667a.776.776,0,0,1-1.073.023l-4.7-4.686a.778.778,0,0,1,1.1-1.1Z"
+                transform="translate(-11.246 17.073) rotate(-90)"
+              />
+            </svg>
+          </span>
+        </a>
       </li>
     </ul>
     <ul class="navbar-nav right-side d-flex align-items-center flex-row">

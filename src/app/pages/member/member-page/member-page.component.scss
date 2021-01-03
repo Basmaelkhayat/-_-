@@ -1,11 +1,16 @@
+:host {
+  width: 100%;
+}
 .navbar-cmp {
   margin-top: -1em;
 }
+
 .member {
   background-color: #f7f7fc;
+  width: 100%;
   nav {
     background-color: white;
-    margin: -1.5em;
+    width: 100%;
     .nav-tabs {
       margin-left: 1em;
       padding-top: 1em;
@@ -36,12 +41,12 @@
   }
   .tab-content {
     background-color: #f7f7fc !important;
+    width: 100%;
     #nav-member {
       padding: 0rem !important;
-      margin: 3.5em 0.5em;
+      margin: 0;
     }
     .tab-pane {
-      margin: 3.5em 2em;
       padding: 1.5rem !important;
     }
   }

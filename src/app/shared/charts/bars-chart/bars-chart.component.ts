@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'app-bars-chart',
@@ -11,7 +12,7 @@ export class BarsChartComponent implements OnInit {
   chartData: any;
   labels: any;
   @Input() punches: any = [];
-  constructor() {}
+  constructor(private _decimalPipe: DecimalPipe) {}
 
   ngOnInit(): void {
     this.chartData = [
@@ -35,6 +36,28 @@ export class BarsChartComponent implements OnInit {
         right: 15,
         top,
         bottom: 0,
+      },
+    },
+    tooltips: {
+      backgroundColor: 'rgba(255, 255, 255, 1)',
+      titleFontColor: 'rgba(139 ,139 ,139 , 1)',
+      bodyFontColor: 'rgba(6 ,44 ,69 , 1)',
+      bodyFontStyle: 'bold',
+      xPadding: 18,
+      yPadding: 18,
+      borderColor: 'rgba(245 ,245 ,245 , 1)',
+      displayColors: false,
+      borderWidth: 5,
+      callbacks: {
+        label: (tooltipItem, data) => {
+          let label = '';
+          tooltipItem.datasetIndex == 0
+            ? (label = 'Current: ')
+            : (label = 'New: ');
+          return (
+            label + this._decimalPipe.transform(tooltipItem.yLabel) + ' punch'
+          );
+        },
       },
     },
     scales: {
