@@ -1,0 +1,81 @@
+.sign-ups {
+  .card {
+    color: black;
+  }
+  .card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    font-weight: 600;
+    .zeal-white-btn {
+      border: 1px solid #b7b7b7;
+      color: black;
+    }
+  }
+  .body {
+    .name {
+      font-size: 1.5625em;
+      font-weight: 600;
+    }
+    .description {
+      font-size: 0.875em;
+      font-weight: 600;
+      color: var(--zeal-color);
+    }
+    .owner {
+      font-size: 1.125em;
+      font-weight: 600;
+    }
+    .phone {
+      font-size: 0.83em;
+    }
+    .email {
+      font-size: 0.875em;
+      font-weight: 600;
+    }
+    .branches {
+      font-size: 0.83em;
+      font-weight: 900;
+      color: var(--zeal-color);
+    }
+    .requests-label {
+      font-size: 0.75em;
+      color: #8d8d8d;
+    }
+    .requests {
+      span {
+        font-size: 0.75em;
+        font-weight: 600;
+        background-color: #70707018;
+        padding: 0.5em;
+        border-radius: 5px;
+        margin: 4px 4px;
+        display: inline-block;
+      }
+    }
+    .point-sales {
+      font-weight: 900;
+      font-size: 0.875em;
+    }
+    .point-sales-label {
+      font-size: 0.875em;
+    }
+    .actions {
+      button {
+        width: 100%;
+        padding: 0.6em 0;
+        font-size: 0.875em;
+        font-weight: 600;
+      }
+      .delete-btn {
+        color: black;
+        background-color: #e8e8e8;
+      }
+      .approve-btn {
+        color: white;
+        background-color: #ee3c62;
+      }
+    }
+  }
+}

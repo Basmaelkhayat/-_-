@@ -2,14 +2,15 @@
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 :root {
-    --zeal-color: #009f88;
-    --zeal-side-color: #062c45;
+  --zeal-color: #009f88;
+  --zeal-side-color: #062c45;
+  --zeal-side-color-transparent: #009f881f;
 }
 $zeal-color: var(--zeal-color);
 $font-color: #66615b !default;
 $fill-font-color: rgba(255, 255, 255, 0.8);
-$font-family-sans-serif: 'Montserrat', 'Helvetica', Arial, sans-serif;
-$sans-serif-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+$font-family-sans-serif: "Montserrat", "Helvetica", Arial, sans-serif;
+$sans-serif-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 
 $none: 0 !default;
 $border-thin: 1px !default;
@@ -276,7 +277,8 @@ $border-radius-bottom: 0 0 10px 10px !default;
 $dropdown-shadow: 1px 2px 7px 1px rgba(0, 0, 0, 0.125);
 $box-shadow-raised: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
 $box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
-$sidebar-box-shadow: 0px 2px 22px 0 rgba(0, 0, 0, 0.2), 0px 2px 30px 0 rgba(0, 0, 0, 0.35);
+$sidebar-box-shadow: 0px 2px 22px 0 rgba(0, 0, 0, 0.2),
+  0px 2px 30px 0 rgba(0, 0, 0, 0.35);
 
 $general-transition-time: 300ms !default;
 
@@ -332,7 +334,7 @@ $bottombar-back: bottombar-back !default;
 
 //Nucleo Icons
 
-$nc-font-path: '../fonts' !default;
+$nc-font-path: "../fonts" !default;
 $nc-font-size-base: 14px !default;
 $nc-css-prefix: nc !default;
 $nc-background-color: #eee !default;

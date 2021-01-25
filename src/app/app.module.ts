@@ -18,6 +18,7 @@ import { InterceptorModule } from './interceptors/interceptor.module';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { ChartsModule } from 'ng2-charts';
 import { DataTablesModule } from 'angular-datatables';
+import { ToggleButtonComponent } from './shared/toggle-button/toggle-button.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,7 @@ import { DataTablesModule } from 'angular-datatables';
     HttpClientModule,
     ToastrModule.forRoot(),
     ChartsModule,
-    DataTablesModule
+    DataTablesModule,
   ],
 
   providers: [CookieService, AuthGuard],

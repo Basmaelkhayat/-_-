@@ -11,12 +11,12 @@ body {
   padding: 10px 0;
 }
 .pages-x-padding {
-  $x-padding: 1.6rem;
+  $x-padding: 2rem;
   padding-right: $x-padding;
   padding-left: $x-padding;
 }
 .pages-y-padding {
-  $y-padding: 2.2rem;
+  $y-padding: 1.2rem;
   padding-top: $y-padding;
   padding-bottom: $y-padding;
 }
@@ -25,4 +25,17 @@ body {
 }
 .input-group.date-picker-input {
   cursor: pointer;
+}
+.zeal-white-btn {
+  background-color: white;
+  color: var(--zeal-color);
+  font-size: 0.75em;
+  font-weight: 600;
+  border-radius: 30px;
+  border: 2px solid var(--zeal-color);
+  padding: 8px 24px;
+  outline: none;
+}
+.zeal-white-btn:hover {
+  box-shadow: 0 0 6px #0fcead;
 }

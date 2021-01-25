@@ -1,0 +1,31 @@
+nav {
+  background-color: white;
+  .nav-tabs {
+    margin-left: 1.5em;
+    border-bottom: none !important;
+    .nav-link.active {
+      color: var(--zeal-color) !important;
+      border: 0;
+      border-bottom: 4px solid var(--zeal-color);
+    }
+    .nav-link {
+      padding: 0.8em 1em 0.8em 1em;
+      color: #626262 !important;
+      transition: none !important;
+      margin: 0em 3em 0em 1em;
+      font-weight: 700;
+    }
+    .nav-tabs .nav-link:hover,
+    .nav-tabs .nav-link:focus {
+      border: none !important;
+    }
+    .nav-tabs .nav-link:hover,
+    .nav-tabs .nav-link:hover {
+      border-color: #e9ecef00 #e9ecef00 #dee2e600 !important;
+    }
+  }
+}
+.tab-content {
+  background-color: #f4f4f4 !important;
+  border-color: #e9ecef00 #e9ecef00 #dee2e600 !important;
+}

@@ -1,0 +1,49 @@
+<div class="pages-x-padding pages-y-padding">
+  <div class="table-container table-responsive scrollable-content">
+    <table datatable class="table table-striped">
+      <thead>
+        <tr class="text-align-center">
+          <th>Business name</th>
+          <th>NO. Of numbers</th>
+          <th>P/M</th>
+          <th>%</th>
+          <th>Subscribers</th>
+          <th>Branches</th>
+          <th>Category</th>
+          <th>SHOW/HIDE</th>
+          <th>Recommended</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="text-align-center" *ngFor="let i of [].constructor(4)">
+          <td class="name">name</td>
+          <td>1021</td>
+          <td>1021</td>
+          <td>2454</td>
+          <td>2454</td>
+          <td>2454</td>
+          <td>
+            <select class="category-selection">
+              <option>Coffee & Drinks</option>
+              <option>Coffee & Drinks</option>
+              <option>Coffee & Drinks</option>
+              <option>Coffee & Drinks</option>
+            </select>
+          </td>
+          <td>
+            <app-toggle-button
+              [color]="'#33AC2E'"
+              [checked]="true"
+            ></app-toggle-button>
+          </td>
+          <td>
+            <app-toggle-button
+              [color]="'#33AC2E'"
+              [checked]="false"
+            ></app-toggle-button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
