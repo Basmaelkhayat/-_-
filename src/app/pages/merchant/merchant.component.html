@@ -1,449 +1,52 @@
-<section id="merchant" class="w-100 pages-x-padding pages-y-padding">
-  <div class="row first-row">
-    <div class="col-lg-3 mb-3 px-2">
-      <div class="card merchant-info h-100">
-        <div
-          class="card-body d-flex flex-column justify-content-center align-items-center py-4"
-        >
-          <div class="img-container">
-            <img
-              class="merchant-img"
-              [src]="merchant?.image"
-              *ngIf="merchant?.image"
-            />
-          </div>
-          <h2 class="merchant-name">
-            {{ merchant?.name }}
-          </h2>
-          <p class="merchant-description">
-            {{ merchant?.description }}
-          </p>
-          <p class="merchant-branches">
-            BRANCHES: <span class="zeal-color">{{ merchant?.branches }}</span>
-          </p>
-          <p class="merchant-date">
-            DATE ONBOARDED:
-            <span class="zeal-color">{{
-              merchant?.created_at | date: "MMM dd,YYYY"
-            }}</span>
-          </p>
-          <p class="merchant-renewal">
-            CONTRACT RENEWAL DATE:
-            <span class="zeal-color">{{
-              merchant?.contract_renewal_date | date: "MMM dd,YYYY"
-            }}</span>
-          </p>
-        </div>
-        <div class="card-body">
-          <div class="category-container">
-            <label class="category-label">Category</label>
-            <div class="category-dropdown" *ngIf="merchant?.category">
-              <span
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="10.886"
-                  height="6.224"
-                  viewBox="0 0 10.886 6.224"
-                >
-                  <path
-                    id="Icon_ionic-ios-arrow-down"
-                    data-name="Icon ionic-ios-arrow-down"
-                    d="M11.632,15.594l4.116-4.119a.775.775,0,0,1,1.1,0,.784.784,0,0,1,0,1.1l-4.664,4.667a.776.776,0,0,1-1.073.023l-4.7-4.686a.778.778,0,0,1,1.1-1.1Z"
-                    transform="translate(-6.188 -11.246)"
-                    fill="#009f88"
-                  />
-                </svg>
-              </span>
-              <select class="category-select" [(ngModel)]="selectedCategory">
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-            </div>
-          </div>
-          <div class="cuisines-container mt-3">
-            <label class="category-label">Cuisines</label>
-            <div class="cuisines-list">
-              <span *ngFor="let c of merchant?.cusines" class="cuisine-name">{{
-                c | titlecase
-              }}</span>
-            </div>
-          </div>
-        </div>
-      </div>
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a
+      class="nav-item nav-link active"
+      id="nav-analytics-tab"
+      data-toggle="tab"
+      href="#nav-analytics"
+      role="tab"
+      aria-controls="nav-analytics"
+      aria-selected="true"
+    >
+      Analytics
+    </a>
+    <a
+      class="nav-item nav-link"
+      id="nav-customers-tab"
+      data-toggle="tab"
+      href="#nav-customers"
+      role="tab"
+      aria-controls="nav-customers"
+      aria-selected="true"
+    >
+      Customers
+    </a>
+  </div>
+  <div class="tab-content" id="nav-tabContent">
+    <div
+      class="tab-pane fade show active"
+      id="nav-analytics"
+      role="tabpanel"
+      aria-labelledby="nav-analytics-tab"
+    >
+      <merch-analytics></merch-analytics>
     </div>
-    <div class="col-lg-9 mb-3 px-0">
-      <div class="row">
-        <div class="col-lg-3 col-md-6 px-2">
-          <div class="card quick-stats">
-            <div class="card-body">
-              <h5 class="card-title">Members</h5>
-              <p class="card-number">{{ merchant?.members }}</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 px-2">
-          <div class="card quick-stats">
-            <div class="card-body">
-              <h5 class="card-title">Visits</h5>
-              <p class="card-number">{{ merchant?.visits }}</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 px-2">
-          <div class="card quick-stats">
-            <div class="card-body">
-              <h5 class="card-title">Punches</h5>
-              <p class="card-number">{{ merchant?.punches }}</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 px-2">
-          <div class="card quick-stats">
-            <div class="card-body">
-              <h5 class="card-title">Spent</h5>
-              <p class="card-number">{{ merchant?.spent }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row row-height">
-        <div class="col-lg-6 px-2 h-100 cards-bottom-margin">
-          <div class="card mx-0 h-100 team-members">
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-center">
-                <p class="main-cards-title">Team Members</p>
-                <button class="zeal-white-btn">Edit</button>
-              </div>
-              <div class="table-responsive scrollable-content">
-                <table class="table">
-                  <tbody>
-                    <tr *ngFor="let member of merchant?.team">
-                      <td class="img-td">
-                        <img [src]="member.image" />
-                      </td>
-
-                      <td>
-                        <p class="m-0 member-name">{{ member.name }}</p>
-                        <p class="m-0 member-title">{{ member.title }}</p>
-                      </td>
-                      <td>
-                        <p class="m-0 member-email text-align-end">
-                          {{ member.email }}
-                        </p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 px-2 h-100 cards-bottom-margin">
-          <div class="card m-0 h-100">
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-center">
-                <p class="main-cards-title">Punches</p>
-                <div class="date-pickers ml-2">
-                  <div class="input-group date-picker-input">
-                    <input
-                      class="form-control"
-                      placeholder="To"
-                      name="dpTo"
-                      ngbDatepicker
-                      #dTo="ngbDatepicker"
-                      (click)="dTo.toggle()"
-                      readonly="readonly"
-                    />
-                    <div class="input-group-append">
-                      <button
-                        class="date-time-btn"
-                        (click)="dTo.toggle()"
-                        type="button"
-                      >
-                        <span class="calendar-icon">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="17.99"
-                            height="17.24"
-                            viewBox="0 0 17.99 17.24"
-                          >
-                            <path
-                              id="Path_2987"
-                              data-name="Path 2987"
-                              d="M1.124,5.7V17.192a1.137,1.137,0,0,0,1.124,1.149H15.741a1.137,1.137,0,0,0,1.124-1.149V5.7ZM2.249,2.25A2.274,2.274,0,0,0,0,4.549V17.192a2.274,2.274,0,0,0,2.249,2.3H15.741a2.274,2.274,0,0,0,2.249-2.3V4.549a2.274,2.274,0,0,0-2.249-2.3Z"
-                              transform="translate(0 -2.25)"
-                              fill="#009f87"
-                              fill-rule="evenodd"
-                            />
-                            <path
-                              id="Path_2989"
-                              data-name="Path 2989"
-                              d="M17.544,13.875c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H18.219c-.373,0-.675-.168-.675-.375Zm-4.048,0c0-.207.3-.375.675-.375H15.52c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H14.171c-.373,0-.675-.168-.675-.375ZM6.75,16.123c0-.207.3-.375.675-.375H8.774c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H7.425c-.373,0-.675-.168-.675-.375Zm4.048,0c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H11.472c-.373,0-.675-.168-.675-.375Z"
-                              transform="translate(-4.501 -6.481)"
-                              fill="#009f87"
-                            />
-                          </svg>
-                        </span>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="input-group date-picker-input ml-2">
-                    <input
-                      class="form-control"
-                      placeholder="From"
-                      name="dpFrom"
-                      ngbDatepicker
-                      #dFrom="ngbDatepicker"
-                      (click)="dFrom.toggle()"
-                      readonly="readonly"
-                    />
-                    <div class="input-group-append">
-                      <button
-                        class="date-time-btn"
-                        (click)="dFrom.toggle()"
-                        type="button"
-                      >
-                        <span class="calendar-icon">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="17.99"
-                            height="17.24"
-                            viewBox="0 0 17.99 17.24"
-                          >
-                            <path
-                              id="Path_2987"
-                              data-name="Path 2987"
-                              d="M1.124,5.7V17.192a1.137,1.137,0,0,0,1.124,1.149H15.741a1.137,1.137,0,0,0,1.124-1.149V5.7ZM2.249,2.25A2.274,2.274,0,0,0,0,4.549V17.192a2.274,2.274,0,0,0,2.249,2.3H15.741a2.274,2.274,0,0,0,2.249-2.3V4.549a2.274,2.274,0,0,0-2.249-2.3Z"
-                              transform="translate(0 -2.25)"
-                              fill="#009f87"
-                              fill-rule="evenodd"
-                            />
-                            <path
-                              id="Path_2989"
-                              data-name="Path 2989"
-                              d="M17.544,13.875c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H18.219c-.373,0-.675-.168-.675-.375Zm-4.048,0c0-.207.3-.375.675-.375H15.52c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H14.171c-.373,0-.675-.168-.675-.375ZM6.75,16.123c0-.207.3-.375.675-.375H8.774c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H7.425c-.373,0-.675-.168-.675-.375Zm4.048,0c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H11.472c-.373,0-.675-.168-.675-.375Z"
-                              transform="translate(-4.501 -6.481)"
-                              fill="#009f87"
-                            />
-                          </svg>
-                        </span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="punches-chart">
-                <div class="scrollable-content">
-                  <app-bars-chart
-                    [punches]="punches"
-                    *ngIf="punches"
-                  ></app-bars-chart>
-                </div>
-              </div>
+    <div
+      class="tab-pane fade"
+      id="nav-customers"
+      role="tabpanel"
+      aria-labelledby="nav-customers-tab"
+    >
+      <div class="w-100 pages-x-padding pages-y-padding">
+        <div class="row">
+          <div class="col-12 px-2">
+            <div class="card">
+              <app-customers></app-customers>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row second-row row-height cards-bottom-margin">
-    <div class="col-lg-3 mb-3 px-2 h-100">
-      <div class="card redeemed-rewards h-100">
-        <div class="card-body">
-          <h5 class="main-cards-title">Top Redeemed Rewards</h5>
-
-          <div class="table-responsive scrollable-content">
-            <table class="table">
-              <tbody>
-                <tr *ngFor="let redeemed of redeemedRewards; let i = index">
-                  <td class="pl-0">{{ i + 1 }}. {{ redeemed.name }}</td>
-                  <td class="zeal-color redeemed-num text-align-end">
-                    {{ redeemed.redeems }}
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-5 px-2 h-100">
-      <div class="card sales-location h-100">
-        <div class="card-body">
-          <div class="d-flex justify-content-between align-items-center">
-            <p class="main-cards-title">Sales By Location</p>
-            <div class="date-pickers ml-2">
-              <div class="input-group date-picker-input">
-                <input
-                  class="form-control"
-                  placeholder="To"
-                  name="dpTo"
-                  ngbDatepicker
-                  #dSalesTo="ngbDatepicker"
-                  (click)="dSalesTo.toggle()"
-                  readonly="readonly"
-                />
-                <div class="input-group-append">
-                  <button
-                    class="date-time-btn"
-                    (click)="dSalesTo.toggle()"
-                    type="button"
-                  >
-                    <span class="calendar-icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="17.99"
-                        height="17.24"
-                        viewBox="0 0 17.99 17.24"
-                      >
-                        <path
-                          id="Path_2987"
-                          data-name="Path 2987"
-                          d="M1.124,5.7V17.192a1.137,1.137,0,0,0,1.124,1.149H15.741a1.137,1.137,0,0,0,1.124-1.149V5.7ZM2.249,2.25A2.274,2.274,0,0,0,0,4.549V17.192a2.274,2.274,0,0,0,2.249,2.3H15.741a2.274,2.274,0,0,0,2.249-2.3V4.549a2.274,2.274,0,0,0-2.249-2.3Z"
-                          transform="translate(0 -2.25)"
-                          fill="#009f87"
-                          fill-rule="evenodd"
-                        />
-                        <path
-                          id="Path_2989"
-                          data-name="Path 2989"
-                          d="M17.544,13.875c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H18.219c-.373,0-.675-.168-.675-.375Zm-4.048,0c0-.207.3-.375.675-.375H15.52c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H14.171c-.373,0-.675-.168-.675-.375ZM6.75,16.123c0-.207.3-.375.675-.375H8.774c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H7.425c-.373,0-.675-.168-.675-.375Zm4.048,0c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H11.472c-.373,0-.675-.168-.675-.375Z"
-                          transform="translate(-4.501 -6.481)"
-                          fill="#009f87"
-                        />
-                      </svg>
-                    </span>
-                  </button>
-                </div>
-              </div>
-              <div class="input-group date-picker-input ml-2">
-                <input
-                  class="form-control"
-                  placeholder="From"
-                  name="dpFrom"
-                  ngbDatepicker
-                  #dSalesFrom="ngbDatepicker"
-                  (click)="dSalesFrom.toggle()"
-                  readonly="readonly"
-                />
-                <div class="input-group-append">
-                  <button
-                    class="date-time-btn"
-                    (click)="dSalesFrom.toggle()"
-                    type="button"
-                  >
-                    <span class="calendar-icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="17.99"
-                        height="17.24"
-                        viewBox="0 0 17.99 17.24"
-                      >
-                        <path
-                          id="Path_2987"
-                          data-name="Path 2987"
-                          d="M1.124,5.7V17.192a1.137,1.137,0,0,0,1.124,1.149H15.741a1.137,1.137,0,0,0,1.124-1.149V5.7ZM2.249,2.25A2.274,2.274,0,0,0,0,4.549V17.192a2.274,2.274,0,0,0,2.249,2.3H15.741a2.274,2.274,0,0,0,2.249-2.3V4.549a2.274,2.274,0,0,0-2.249-2.3Z"
-                          transform="translate(0 -2.25)"
-                          fill="#009f87"
-                          fill-rule="evenodd"
-                        />
-                        <path
-                          id="Path_2989"
-                          data-name="Path 2989"
-                          d="M17.544,13.875c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H18.219c-.373,0-.675-.168-.675-.375Zm-4.048,0c0-.207.3-.375.675-.375H15.52c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H14.171c-.373,0-.675-.168-.675-.375ZM6.75,16.123c0-.207.3-.375.675-.375H8.774c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H7.425c-.373,0-.675-.168-.675-.375Zm4.048,0c0-.207.3-.375.675-.375h1.349c.373,0,.675.168.675.375v.75c0,.207-.3.375-.675.375H11.472c-.373,0-.675-.168-.675-.375Z"
-                          transform="translate(-4.501 -6.481)"
-                          fill="#009f87"
-                        />
-                      </svg>
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="sales-info my-4">
-            <p class="m-0 sales-label">Total Sales</p>
-            <p class="m-0 sales-num">
-              {{ sales?.total | number }}<span>EGP</span>
-            </p>
-          </div>
-          <div class="sales-chart">
-            <app-single-bar *ngIf="sales" [data]="sales"></app-single-bar>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 px-2 h-100">
-      <div class="card h-100 feedback">
-        <div class="card-body">
-          <div class="d-flex align-items-center justify-content-between w-100">
-            <div class="main-cards-title">Feedback</div>
-          </div>
-          <div class="d-flex justify-content-center align-items-stretch mt-5">
-            <div class="total-reviews text-center mr-5">
-              <p class="reviews-label">Total Reviews</p>
-              <h5 class="text-center total-feedback">
-                {{ feedback?.total | number }}
-              </h5>
-            </div>
-            <div class="total-reviews text-center">
-              <p class="reviews-label">Total Rating</p>
-              <div class="">
-                <img
-                  *ngFor="let star of [].constructor(feedback?.rating)"
-                  src="../../../assets/images/star-rating.icons.svg"
-                  class="mr-1"
-                />
-
-                <img
-                  src="../../../assets/images/Icon ionic-ios-star.svg"
-                  *ngFor="let star of [].constructor(5 - feedback?.rating)"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="pb-2 pt-0 pr-4 pl-4">
-            <table class="table">
-              <tbody>
-                <tr *ngFor="let star of [].constructor(5); let i = index">
-                  <td>
-                    {{ 5 - i }}
-                  </td>
-                  <td style="width: 17%">
-                    <img
-                      src="../../../assets/images/star-rating.icons.svg"
-                      alt=""
-                    />
-                  </td>
-                  <td style="width: 70%">
-                    <div class="progress bg-transparent">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        [style.width]="feedback?.percentage[5 - i] * 100 + '%'"
-                        aria-valuenow="25"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </td>
-                  <td class="percentage-number">
-                    {{ feedback?.percentage[5 - i] * 100 | number: "1.2-2" }}%
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12 px-2">
-      <div class="customers-card w-100">
-        <app-customers></app-customers>
-      </div>
-    </div>
-  </div>
-</section>
+</nav>

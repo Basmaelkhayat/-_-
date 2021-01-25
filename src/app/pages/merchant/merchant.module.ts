@@ -10,19 +10,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BarsChartModule } from '../../shared/charts/bars-chart/bars-chart.module';
 import { SingleBarModule } from 'src/app/shared/charts/single-bar/single-bar.module';
 import { CustomersModule } from 'src/app/shared/customers/customers.module';
+import { AnalyticsModule } from './analytics/analytics.module';
 
 @NgModule({
   imports: [
     CommonModule,
     MerchantRoutingModule,
-    NgxChartsModule,
-    ChartsModule,
-    FormsModule,
-    NgbModule,
-    ReactiveFormsModule,
-    SingleBarModule,
-    BarsChartModule,
     CustomersModule,
+    AnalyticsModule,
   ],
   exports: [MerchantComponent],
   declarations: [MerchantComponent],

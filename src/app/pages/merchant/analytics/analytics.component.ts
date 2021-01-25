@@ -2,11 +2,11 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MerchantService } from 'src/app/services/merchant.service';
 
 @Component({
-  selector: 'merchant-cmp',
-  templateUrl: 'merchant.component.html',
-  styleUrls: ['merchant.component.scss'],
+  selector: 'merch-analytics',
+  templateUrl: './analytics.component.html',
+  styleUrls: ['./analytics.component.scss'],
 })
-export class MerchantComponent implements OnInit {
+export class AnalyticsComponent implements OnInit {
   merchant: any = null;
   punches: any = null;
   selectedCategory: any = null;
