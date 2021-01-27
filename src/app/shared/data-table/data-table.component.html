@@ -1,9 +1,17 @@
-<div class="table-container table-responsive scrollable-content">
-  <table datatable class="table table-striped">
+<div class="m-auto d-flex" *ngIf="show && loaded">
+  <p class="m-auto d-flex">Loading ... !</p>
+</div>
+<div class="m-auto d-flex" *ngIf="!show && dataTable.length == 0 && loaded">
+  <p class="m-auto d-flex">No Data Available!</p>
+</div>
+<div *ngIf="!show && dataTable.length != 0 && loaded">
+  <table class="table table-striped w-100">
     <thead>
       <tr class="text-align-center">
         <th class="none_sorting">
-          <button type="button" class="btn">Select all</button>
+          <button type="button" class="btn" (click)="selectAll()">
+            Select all
+          </button>
         </th>
         <th class="none_sorting_asc">Name</th>
         <th>Total visits</th>
@@ -15,17 +23,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="text-align-center">
+      <tr *ngFor="let item of dataTable" class="text-align-center">
         <td class="text-align-center">
-          <!-- [(ngModel)]="item.selected" -->
-          <input type="checkbox" />
+          <input type="checkbox" [(ngModel)]="item.selected" />
         </td>
-        <td class="name">name</td>
-        <td>count</td>
-        <td>total spent</td>
-        <td>redeem count</td>
-        <td>15/10</td>
-        <td>15/10</td>
+        <td class="name" (click)="CustomerPage(item)">{{ item.name }}</td>
+        <td>{{ item.visit_count }}</td>
+        <td>{{ item.total_spent }}</td>
+        <td>{{ item.redeem_count }}</td>
+        <td>{{ item.created_at | date }}</td>
+        <td>{{ item.last_visit | date }}</td>
         <!-- <td>
               <button type="button" class="btn"> 
                   Push
@@ -34,4 +41,53 @@
       </tr>
     </tbody>
   </table>
+  <nav aria-label="Page navigation example" class="Pages">
+    <ul class="pagination justify-content-end">
+      <li class="page-item disable">
+        <a class="page-link total"> Total Customers : {{ page_info.total }} </a>
+      </li>
+    </ul>
+  </nav>
+  <nav aria-label="Page navigation example" class="navigation">
+    <ul class="pagination justify-content-end">
+      <li class="page-item disable">
+        <a class="page-link total">
+          Page {{ page_info.current_page }} of {{ page_info.last_page }}
+          <div
+            class="spinner-border text-secondary"
+            role="status"
+            *ngIf="spinner"
+          >
+            <span class="sr-only">Loading...</span>
+          </div>
+        </a>
+      </li>
+      <li
+        class="page-item"
+        [class]="page_info.current_page <= 1 ? 'disable' : ''"
+      >
+        <a class="page-link" (click)="changePage(page_info.current_page - 1)">
+          Previous
+        </a>
+      </li>
+
+      <li class="page-item" *ngIf="page_info.current_page != 1">
+        <a class="page-link" (click)="changePage(1)"> 1 </a>
+      </li>
+      <li class="page-item active">
+        <a class="page-link">
+          {{ page_info.current_page }}
+        </a>
+      </li>
+
+      <li
+        class="page-item"
+        [class]="page_info.current_page >= page_info.last_page ? 'disable' : ''"
+      >
+        <a class="page-link" (click)="changePage(page_info.current_page + 1)">
+          Next
+        </a>
+      </li>
+    </ul>
+  </nav>
 </div>
