@@ -27,4 +27,11 @@ export const MainLayoutRoutes: Routes = [
         (mod) => mod.BusinessesModule
       ),
   },
+  {
+    path: 'cashier-management',
+    loadChildren: () =>
+      import('../../pages/cashier-management/cashier-management.module').then(
+        (mod) => mod.CashierManagementModule
+      ),
+  },
 ];

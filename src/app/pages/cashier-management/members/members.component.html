@@ -1,0 +1,152 @@
+<div class="pages-x-padding pages-y-padding cashier">
+  <div class="row m-0">
+    <div class="col-lg-4 row m-0 quick-stats px-2">
+      <div class="col-6 px-2">
+        <div class="quick-stat">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">total signed up cashiers</h5>
+              <p class="card-number">250</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 px-2">
+        <div class="quick-stat">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">avg. punches per cashier</h5>
+              <p class="card-number">250</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 px-2">
+        <div class="quick-stat">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">today's Punches</h5>
+              <p class="card-number">250</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 px-2">
+        <div class="quick-stat">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">today's Punches</h5>
+              <p class="card-number">250</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 row m-0 top-performance px-2">
+      <div class="px-2 w-100 h-100 pb-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">top performing cashiers per merchent</h5>
+            <line-curve-chart></line-curve-chart>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 row m-0 top-cashiers px-2">
+      <div class="px-2 w-100 h-100">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">highest performing cashiers this month</h5>
+            <div class="table-responsive scrollable-content">
+              <table class="table">
+                <tbody>
+                  <tr *ngFor="let member of [].constructor(5)">
+                    <td class="img-td">
+                      <img src="../../../../assets/images/Avatar.png" />
+                    </td>
+
+                    <td>
+                      <p class="m-0 member-name">Ahmed Mohamed</p>
+                      <p class="m-0 member-title">Waiter</p>
+                    </td>
+                    <td class="merchant-td">batterhalf & co.</td>
+                    <td class="zeal-color font-weight-bolder">200 PUNCH</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row m-0 business-members">
+    <div class="col-12 px-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Select Business</h5>
+          <select class="business-select" [(ngModel)]="selectedBusiness">
+            <option>Batterhalf & Co</option>
+            <option>Batterhalf & Co</option>
+            <option>Batterhalf & Co</option>
+          </select>
+          <div class="members-table">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h5 class="table-label mr-2" *ngIf="selectedBusiness">
+                {{ selectedBusiness }} - Team Members
+              </h5>
+              <button class="btn add-button">Add Team Member +</button>
+            </div>
+
+            <div class="table-container table-responsive scrollable-content">
+              <table datatable class="table table-striped">
+                <thead>
+                  <tr class="text-align-center">
+                    <th class="text-align-start">Cashier name</th>
+                    <th>Branch</th>
+                    <th>Email</th>
+                    <th>Punches This Month</th>
+                    <th>Total Punches</th>
+                    <th>incentive</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    class="text-align-center"
+                    *ngFor="let i of [].constructor(4)"
+                  >
+                    <td class="img-td">
+                      <div
+                        class="d-flex justify-content-start align-items-center"
+                      >
+                        <img src="../../../assets/images/Avatar.png" />
+                        <div>
+                          <p class="m-0 member-name">Ahmed Ali</p>
+                          <p class="m-0 member-title">Waiter</p>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td>1021</td>
+                    <td>1021</td>
+                    <td>2454</td>
+                    <td>2454</td>
+                    <td class="zeal-color">2454EGP</td>
+                    <td>
+                      <button
+                        class="zeal-bg btn text-white rounded-pill font-weight-bold px-4"
+                      >
+                        Edit
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
