@@ -1,4 +1,4 @@
-<div class="row pages-x-padding pages-y-padding m-0 member" *ngIf="data">
+<div class="row pages-x-padding pages-y-padding m-0 member">
   <div class="col-lg-3 col-md-12 col-sm-12 card">
     <div class="member__topCustomers">
       <div class="card-body card_margin col-lg-12 col-md-12 col-sm-12">
@@ -133,9 +133,6 @@
           </div>
         </div>
         <div class="member__mainContent__bg__brands">
-          <div class="member__mainContent__bg__brands__p">
-            <p>{{ data.name }}</p>
-          </div>
           <div
             class="member__mainContent__bg__brands__buttons"
             *ngFor="let item of data.visits"

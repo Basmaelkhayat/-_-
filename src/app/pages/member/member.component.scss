@@ -13,6 +13,8 @@
     .first-letter {
       width: 9em;
       height: 9em;
+      font-size: 1em;
+      font-weight: 900;
     }
     h4 {
       text-transform: initial;
@@ -64,6 +66,10 @@
     &__bg {
       .card {
         padding: 0em 0em 15px;
+        .card-title {
+          font-weight: 600;
+          color: var(--zeal-side-color);
+        }
         .bg-head {
           background-color: #e6f6f3;
           padding: 0;
@@ -74,7 +80,7 @@
         }
       }
       &__brands {
-        margin: 2em auto;
+        padding: 1em 1em 0;
         div {
           display: inline-block;
         }
@@ -86,20 +92,21 @@
           }
         }
         &__buttons {
-          margin: 0em 0.6em;
+          margin: 0.4em;
           .elsagher {
-            background-color: #000000;
             border-radius: 15px;
             padding: 0.7em 0.8em;
-            border-color: #000000;
             text-align: center;
+            font-weight: 600;
+            background-color: #000000;
+            border-color: #000000;
+            font-size: 0.75em;
             span {
               background-color: white;
               color: black;
-              font-weight: 600;
               border-radius: 6px;
               text-align: center;
-              padding: 0.2em;
+              padding: 0.3em 0.8em;
               display: inherit;
               margin: 0em 0.3em;
             }
@@ -108,12 +115,18 @@
       }
     }
     &__activityTable {
-      font-weight: bolder;
+      font-weight: 600;
+      .card-title {
+        font-weight: 600;
+        font-size: 1.4em;
+        margin: 0;
+      }
       &__content {
         #scrollableContent {
           height: 24em;
           padding: 0;
           margin: 0;
+
           .feed {
             &__table {
               color: #062c45;
@@ -134,9 +147,8 @@
                 border-top: none;
 
                 text-align: center;
-                padding: 1em 0px;
+                padding: 1em;
                 margin: auto;
-                padding-top: 2em;
               }
               .img-td {
                 $img-height: 3em;
@@ -175,6 +187,7 @@
         font-weight: 600;
       }
       .card {
+        margin-bottom: 2.5em;
         .card-title {
           margin: 0.5em 0em;
         }
