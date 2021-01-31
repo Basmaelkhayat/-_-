@@ -42,12 +42,9 @@
   .tab-content {
     background-color: #f7f7fc !important;
     width: 100%;
-    #nav-member {
+    #nav-member ,#nav-chats{
       padding: 0rem !important;
       margin: 0;
-    }
-    .tab-pane {
-      padding: 1.5rem !important;
     }
   }
 }
